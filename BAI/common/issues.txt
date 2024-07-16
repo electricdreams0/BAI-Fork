@@ -402,6 +402,64 @@ political_reforms = {
 			}
 		}
 	}
+
+### HPMP Options ###
+	subsidise = {
+		subsidise_yes = {
+			rules = {can_subsidise = yes }
+			allow = {
+				AND = {
+					ai = no
+					ai = yes
+				}
+			}
+		}
+		subsidise_no = {
+			rules = {can_subsidise = no }
+			allow = {
+				AND = {
+					ai = no
+					ai = yes
+				}
+			}
+		}
+	}
+	victoria3_mode = {
+		victoria3_mode_no = {
+			rules = { }
+			allow = {
+				AND = {
+					ai = no
+					ai = yes
+				}
+			}
+		}
+		victoria3_mode_yes = {
+			rules = {
+				build_factory = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = no
+				pop_expand_factory = no
+				pop_open_factory = no
+				delete_factory_if_no_input = no
+				build_factory_invest = yes
+				expand_factory_invest = yes
+				build_railway_invest = yes
+				can_invest_in_pop_projects = yes
+				}
+			allow = {
+				AND = {
+					ai = no
+					ai = yes
+				}
+			}
+		}
+	}
 }
 
 ##########################################
