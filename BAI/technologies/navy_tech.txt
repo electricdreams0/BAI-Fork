@@ -474,7 +474,7 @@ modern_naval_doctrine = {
 
 modern_naval_doctrine_1920 = {
 	area = naval_doctrine
-	year = 1930
+	year = 1920
 	cost = 28800
 	max_naval_base = 1
 	ai_chance = {
@@ -980,7 +980,7 @@ steam_turbine_ships = {
 }
 oil_driven_ships = {
 	area = ship_construction
-	year = 1919
+	year = 1910
 	cost = 21600
 	unciv_military = yes
 	navy_base = { maximum_speed = 2 }
@@ -1061,7 +1061,7 @@ oil_driven_ships = {
 
 modern_ship_construction = {
 	area = ship_construction
-	year = 1930
+	year = 1920
 	cost = 28800
 	navy_base = { maximum_speed = 2 }
 	ai_chance = {
@@ -1578,7 +1578,7 @@ advanced_naval_design = {
 }
 modern_naval_design = {
 	area = naval_engineering
-	year = 1919
+	year = 1910
 	cost = 21600
 	unciv_military = yes
 	navy_base = { build_time = -10 }
@@ -1660,7 +1660,7 @@ modern_naval_design = {
 
 modern_naval_design_1920 = {
 	area = naval_engineering
-	year = 1930
+	year = 1920
 	cost = 28800
 	navy_base = {
 		build_time = -10
@@ -1919,7 +1919,7 @@ naval_directionism = {
 }
 naval_integration = {
 	area = naval_science
-	year = 1919
+	year = 1910
 	cost = 21600
 	unciv_military = yes
 	supply_range = 0.10
@@ -1970,7 +1970,7 @@ naval_integration = {
 
 modern_naval_science = {
 	area = naval_science
-	year = 1930
+	year = 1920
 	cost = 19600
 	unciv_military = yes
 	navy_base = {
@@ -2401,7 +2401,7 @@ naval_nco_training = {
 }
 modern_naval_training = {
 	area = naval_leadership
-	year = 1919
+	year = 1910
 	cost = 21600
 	unciv_military = yes
 	navy_base = {
@@ -2485,7 +2485,7 @@ modern_naval_training = {
 
 modern_naval_training_1920 = {
 	area = naval_leadership
-	year = 1930
+	year = 1920
 	cost = 9800
 	colonial_migration = 0.075
 	ai_chance = {

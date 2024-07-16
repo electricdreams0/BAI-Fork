@@ -225,7 +225,7 @@ mutual_funds = {
 }
 modern_financial_institutions = {
 	area = financial_institutions
-	year = 1930
+	year = 1920
 	cost = 28800
 	tax_eff = 2.5
 	ai_chance = {
@@ -434,7 +434,7 @@ market_determined_exchange_rates = {
 }
 modern_monetary_system = {
 	area = monetary_system
-	year = 1930
+	year = 1920
 	cost = 28800
 	administrative_efficiency = 0.1
 	ai_chance = {
@@ -618,7 +618,7 @@ keynesian_economics = {
 }
 neoliberal_theory = {
 	area = economic_thought_and_critique
-	year = 1930
+	year = 1920
 	cost = 28800
 	factory_input = -0.03
 	ai_chance = {
@@ -844,7 +844,7 @@ government_interventionism = {
 }
 globalized_markets = {
 	area = market_functionality
-	year = 1930
+	year = 1920
 	cost = 28800
 	influence = 0.2
 	ai_chance = {
@@ -1063,7 +1063,7 @@ organizational_development = {
 }
 modern_business_management = {
 	area = tech_organization
-	year = 1930
+	year = 1920
 	cost = 28800
 	factory_output = 0.01
 	ai_chance = {

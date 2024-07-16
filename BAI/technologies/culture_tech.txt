@@ -169,7 +169,7 @@ mass_culture_n_the_avant_garde = {
 
 modern_aesthetics = {
 	area = aesthetics
-	year = 1930
+	year = 1920
 	cost = 28800
 	prestige = 0.065
 	ai_chance = {
@@ -348,7 +348,7 @@ anti__rationalism = {
 
 critical_theory = {
 	area = philosophy
-	year = 1930
+	year = 1920
 	cost = 28800
 	increase_research = 0.75
 	ai_chance = {
@@ -535,7 +535,7 @@ social_alienation = {
 
 mathematical_sociology = {
 	area = social_thought
-	year = 1930
+	year = 1920
 	cost = 28800
 	colonial_migration = 0.05
 	education_efficiency = 0.2
@@ -739,7 +739,7 @@ mass_politics = {
 		}
 		modifier = {
 			factor = 51
-			year = 1930
+			year = 1920
 		}
 		modifier = {
 			factor = 5
@@ -754,7 +754,7 @@ mass_politics = {
 
 post_colonialism = {
 	area = political_thought
-	year = 1930
+	year = 1920
 	cost = 28800
 	max_national_focus = 1
 	cb_creation_speed = 0.25
@@ -770,7 +770,7 @@ post_colonialism = {
 		}
 		modifier = {
 			factor = 2
-			year = 1930
+			year = 1920
 		}
 		modifier = {
 			factor = 5
@@ -961,14 +961,14 @@ behaviorism = {
 		}
 		modifier = {
 			factor = 2
-			year = 1930
+			year = 1920
 		}
 	}
 }
 
 humanistic_psychology = {
 	area = psychology
-	year = 1930
+	year = 1920
 	cost = 28800
 	education_efficiency = 0.1
 	regular_experience_level = 5
