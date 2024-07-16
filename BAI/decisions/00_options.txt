@@ -1,0 +1,346 @@
+political_decisions = {
+	enable_options = {
+		picture = starting_options
+		alert = yes
+		potential = {
+			ai = no
+			NOT = { has_global_flag = looking_through_options }
+			NOT = { has_global_flag = permanently_hide_options }
+		}
+
+		allow = {
+
+		}
+
+		effect = {
+			set_global_flag = looking_through_options
+			set_country_flag = country_looking_through_options
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_options = {
+		picture = starting_options
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+		}
+
+		allow = {
+		}
+
+		effect = {
+			clr_global_flag = looking_through_options
+			clr_country_flag = country_looking_through_options
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	permanently_hide_options = {
+		picture = starting_options
+		alert = yes
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+		}
+		allow = {
+		}
+
+		effect = {
+			set_global_flag = permanently_hide_options
+			clr_country_flag = country_looking_through_options
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	enable_lower_infamy_mode = {
+		picture = lower_infamy
+		alert = no
+		potential = {
+			has_country_flag = country_looking_through_options
+		}
+		allow = {
+		}
+
+		effect = {
+		country_event ={ id=1 days=0 }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	enable_early_socialism = {
+		picture = early_socialism
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			NOT = { has_global_flag = early_socialism }
+		}
+
+		allow = {
+		}
+
+		effect = {
+		set_global_flag = early_socialism
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_early_socialism = {
+		picture = early_socialism
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			has_global_flag = early_socialism
+		}
+
+		allow = {
+		}
+
+		effect = {
+		clr_global_flag = early_socialism
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_anarcho_liberals = {
+		picture = starting_options
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = anarcho_liberals_disabled }
+			NOT = { is_ideology_enabled = anarcho_liberal }
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_global_flag = anarcho_liberals_disabled
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	enable_splendid_isolation = {
+		picture = pax_britannica
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			NOT = { has_global_flag = splendid_isolation }
+		}
+
+		allow = {
+		}
+
+		effect = {
+		set_global_flag = splendid_isolation
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_splendid_isolation = {
+		picture = pax_britannica
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			has_global_flag = splendid_isolation
+		}
+
+		allow = {
+		}
+
+		effect = {
+		clr_global_flag = splendid_isolation
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	enable_russian_isolation = {
+		picture = bad_bear
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			NOT = { has_global_flag = russian_isolation }
+		}
+
+		allow = {
+		}
+
+		effect = {
+		set_global_flag = russian_isolation
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_russian_isolation = {
+		picture = bad_bear
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			has_global_flag = russian_isolation
+		}
+
+		allow = {
+		}
+
+		effect = {
+		clr_global_flag = russian_isolation
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	enable_victoria3_mode = {
+		picture = starting_options
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = victoria3_mode }
+			NOT = { has_global_flag = permanently_hide_options }
+		}
+		allow = {
+
+		}
+
+		effect = {
+			political_reform = victoria3_mode_yes
+		any_country = {
+			political_reform = victoria3_mode_yes
+		}
+			set_global_flag = victoria3_mode
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_victoria3_mode = {
+		picture = starting_options
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			has_global_flag = victoria3_mode
+			NOT = { has_global_flag = permanently_hide_options }
+		}
+		allow = {
+
+		}
+
+		effect = {
+			political_reform = victoria3_mode_no
+		any_country = {
+			political_reform = victoria3_mode_no
+		}
+
+			clr_global_flag = victoria3_mode
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	enable_crimeamod_subsidies = {
+		picture = crimeamod
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = crimeamod_subsidies_enabled }
+			NOT = { has_global_flag = permanently_hide_options }
+		}
+		allow = {
+
+		}
+
+		effect = {
+			set_global_flag = crimeamod_subsidies_enabled
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_crimeamod_subsidies = {
+		picture = crimeamod
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			has_global_flag = crimeamod_subsidies_enabled
+			NOT = { has_global_flag = permanently_hide_options }
+		}
+		allow = {
+
+		}
+
+		effect = {
+			clr_global_flag = crimeamod_subsidies_enabled
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	enable_harder_ai = {
+		picture = crimeamod
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			NOT = { has_global_flag = harder_ai }
+		}
+
+		allow = {
+		}
+
+		effect = {
+		set_global_flag = harder_ai
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	disable_harder_ai = {
+		picture = crimeamod
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { has_global_flag = permanently_hide_options }
+			has_global_flag = harder_ai
+		}
+
+		allow = {
+		}
+
+		effect = {
+		clr_global_flag = harder_ai
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+}

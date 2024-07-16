@@ -1,0 +1,49 @@
+enable_lower_infamy_mode_title;Toggle Reduced Infamy Mode;;;;;;;;;;;;;
+enable_lower_infamy_mode_desc;This will cause infamy for everyone to be lower.;;;;;;;;;;;;;
+lower_infamy;Reduced Infamy;;;;;;;;;;;;;
+lower_infamy_desc;Infamy is decaying at a faster rate.;;;;;;;;;;;;;
+even_lower_infamy;Further Reduced Infamy;;;;;;;;;;;;;
+even_lower_infamy_desc;Infamy is decaying at an even faster rate.;;;;;;;;;;;;;
+enable_options_title;Show 'Options' Decisions;;;;;;;;;;;;;
+enable_options_desc;This decision shows all optional decisions to tweak and change the game's behaviour from vanilla. This, along with all decisions it enables, will disappear once you use the decision to hide them all below to reduce clutter, Once a tweak is chosen, you can't disable it anymore, so if you misclick you need to edit your save or start a new game.;;;;;;;;;;;;;
+disable_options_title;Hide 'Options' Decisions;;;;;;;;;;;;;
+disable_options_desc;This will hide all optional tweaks. You still have until you use the decision to hide options and features to change your mind though.;;;;;;;;;;;;;
+enable_early_socialism_title;Enable Early Socialism and Communism;;;;;;;;;;;;;
+enable_early_socialism_desc;This will cause Socialism and Communism to be enabled after 1848, instead of 1860/1870, I have not extensivly tested this yet, but it's based on the fact socialism existed before 1848 to some degree, and the communist manifesto was published in 1848, so it makes some sense to enable these ideologies in that year.;;;;;;;;;;;;;
+disable_early_socialism_title;Disable Early Socialism and Communism;;;;;;;;;;;;;
+disable_early_socialism_desc;This will disable Early Socialism and Communism if you accidentlly selected the option.;;;;;;;;;;;;;
+disable_anarcho_liberals_title;Option: Disable Anarcho-Liberal Ideology;;;;;;;;;;;;;
+disable_anarcho_liberals_desc;This tweak will stop anarcho-liberal ideology from spawning. It may help performance a bit. Some people think they are too unrealistic for them, so they might want to disable it. I didn't test any balance issues that might arise without them in the game though.;;;;;;;;;;;;;
+enable_victoria3_mode_title;Enable Victoria 3 Mode;;;;;;;;;;;;;
+enable_victoria3_mode_desc;This mode will enable you to build/close/expand new factories and micro your economy like Victoria 3, at least as much as Victoria II allows you too... This will require a mounth tick before having any effect.;;;;;;;;;;;;;
+disable_victoria3_mode_title;Disable Victoria 3 Mode;;;;;;;;;;;;;
+disable_victoria3_mode_desc;This will turn off Victoria 3 mode and return you to Victoria II, where economic pollicy matters. This will require a mounth tick before having any effect.;;;;;;;;;;;;;
+enable_splendid_isolation_title;Enable Splendid Isolation;;;;;;;;;;;;;
+enable_splendid_isolation_desc;This will cause an event to prevent the UK from forming an alliance with other great powers until either after 1870, Germany forms, or the UK is no longer the 1st place great power.;;;;;;;;;;;;;
+disable_splendid_isolation_title;Disable Splendid Isolation;;;;;;;;;;;;;
+disable_splendid_isolation_desc;This will disable an event to prevent the UK from forming an alliance with other great powers until either after 1870, Germany forms, or the UK is no longer the 1st place great power.;;;;;;;;;;;;;
+enable_russian_isolation_title;Enable Russian Isolation;;;;;;;;;;;;;
+enable_russian_isolation_desc;This will cause an event to prevent Russia from forming an alliance with other great powers, besides Prussia/NGF/Germany and Austria/Austria-Hungary, until after 1890. This will help simulate the deep distrust the western powers of Britian and France had with the Russian empire for most of the 19th century. This will also likely have the effect of keeping Russia out of the Franco-Prussian wars, thus maintaining its stability better.;;;;;;;;;;;;;
+disable_russian_isolation_title;Disable Russian Isolation;;;;;;;;;;;;;
+disable_russian_isolation_desc;This will disable an event to prevent Russia from forming an alliance with other great powers, besides Prussia/NGF/Germany and Austria/Austria-Hungary, until after 1890.;;;;;;;;;;;;;
+enable_crimeamod_subsidies_title;Enable Crimeamod Style Subsidies;;;;;;;;;;;;;
+enable_crimeamod_subsidies_desc;Crimeamod is a mod for Victoria 2 which has very good AI, one given reason for this is, in the mod AI countries can't subsidize their unprofitable factories, which the AI has a tendancy to expand until it bankrupts itself. The AI seems to use the Extra money to have a bigger military, so use this option if you want to try a AI which will prioritize military spending. From my testing in the very late game industry tends to concentrate into the top industrial powers and other AI's can struggle to break into the market.;;;;;;;;;;;;;
+disable_crimeamod_subsidies_title;This will turn off Crimeamod Style Subsidies;;;;;;;;;;;;;
+disable_crimeamod_subsidies_desc;This will turn off Crimeamod style subsidies. Use this if you accidentlly enabled it before.;;;;;;;;;;;;;
+enable_harder_ai_title;Enable Harder AI;;;;;;;;;;;;;
+enable_harder_ai_desc;This will cause the AI to use tariffs more effectively, making the AI have more money and be harder.;;;;;;;;;;;;;
+disable_harder_ai_title;Disable Harder AI;;;;;;;;;;;;;
+disable_harder_ai_desc;This will cause the AI to not use tariffs more effectively, making the AI have less money and be easier.;;;;;;;;;;;;;
+permanently_hide_options_title;Permanently Hide all Options Decisions.;;;;;;;;;;;;;
+permanently_hide_options_desc;This decision will permanently hide the decisions for additional features to reduce clutter.;;;;;;;;;;;;;
+EVTNAME99930;Splendid Isolation;;;;;;;;;;;;x
+EVTDESC99930;It is the duty of the Government of this country, placed as it is with regard to geographical position, to keep itself upon terms of goodwill with all surrounding nations, but not to entangle itself with any single or monopolising alliance with any one of them, above all to endeavour not to interfere needlessly and vexatiously with the internal affairs of any foreign country. - Lord Edward Stanley, Secretary of State for Foreign Affairs. \n\nThe policy of 'splendid isolation' was characterised by Britain's reluctance to enter into permanent European alliances or commitments with the other great powers. During the late 19th century, Britain's primary goal in foreign policy was to maintain the balance of power in Europe and to intervene if that balance was upset. Its secondary goal was to protect its overseas interest in the colonies and dominions, as free trade kept the Empire alive.;;;;;;;;;;;x
+EVTNAME99931;Russian Isolation;;;;;;;;;;;;x
+EVTDESC99931;Russia in the 19th century was diplomatically isolated from the Western European Empires by an intense, in hindsight, irrational fear of Russian designs on conquest of India and the whole of Eastern Europe, specifically the Balkans and the Dardanelles. This caused the western powers to intervene on the Ottomans side in the Crimean war, and Russia to not enter any allience with Britian or France until the last decade of the 19th century, once they shared a common foe in Germany.;;;;;;;;;;;x
+EVT99930OPT;The great Mother Empire stands splendidly isolated in Europe!;;;;;;;;;;;;x
+EVT99931OPT;Russophobia has infested all levels of their government!;;;;;;;;;;;;x
+EVTDESC1;Globally lower infamy with options for -0.10 or -0.20 infamy. \n\n§RNOTE: If you change your mind after you hide the options you can fire event 1 in the console.;;;;;;x
+EVT1OPTA;Great! §RDisables Further Reduced Infamy option.;;;;;;;;;;;;x
+EVT1OPTB;Even lower infamy, please! §RDisables Reduced Infamy option.;;;;;;;;;;;;x
+EVT1OPTC;Let me blob! §GEnables both Infamy Reductions. §RProbably not at all balanced!;;;;;;;;;;;;x
+EVT1OPTD;We do not want this. §RDisables all infamy reductions.;;;;;;;;;;;;x

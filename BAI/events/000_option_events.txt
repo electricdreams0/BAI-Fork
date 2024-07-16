@@ -1,0 +1,92 @@
+country_event = {
+	id = 1
+
+	is_triggered_only = yes
+	title = "Lower Infamy"
+	desc = "EVTDESC1"
+	picture = "administration"
+
+	only_if_triggered = yes
+
+	option = {
+		name = "EVT1OPTA"
+		any_country = {
+			add_country_modifier = { name = lower_infamy duration = -1 }
+			remove_country_modifier = even_lower_infamy
+		}
+		add_country_modifier = { name = lower_infamy duration = -1 }
+		remove_country_modifier = even_lower_infamy
+		}
+
+	option = {
+		name = "EVT1OPTB"
+		any_country = {
+			add_country_modifier = { name = even_lower_infamy duration = -1 }
+			remove_country_modifier = lower_infamy
+		}
+		add_country_modifier = { name = even_lower_infamy duration = -1 }
+		remove_country_modifier = lower_infamy
+	}
+
+	option = {
+		name = "EVT1OPTC"
+		any_country = {
+			add_country_modifier = { name = even_lower_infamy duration = -1 }
+			add_country_modifier = { name = lower_infamy duration = -1 }
+		}
+		add_country_modifier = { name = even_lower_infamy duration = -1 }
+		add_country_modifier = { name = lower_infamy duration = -1 }
+	}
+
+	option = {
+		name = "EVT1OPTD"
+		any_country = {
+			remove_country_modifier = lower_infamy
+			remove_country_modifier = even_lower_infamy
+		}
+		remove_country_modifier = lower_infamy
+		remove_country_modifier = even_lower_infamy
+	}
+}
+
+country_event = {
+	id = 2
+	is_triggered_only = yes
+	title = "IF Emulation Test"
+	desc = "This is to test the IF emulation for Vic2"
+	picture = "administration"
+
+	only_if_triggered = yes
+
+	option = {
+		name = "Great to hear!"
+
+		if = {
+			limit = {
+				THIS = {
+					OR = {
+						primary_culture = north_german
+						primary_culture = south_german
+					}
+				}
+			}
+			FRA = {
+				410 = {
+					add_core = THIS
+					remove_core = FRA
+					secede_province = THIS
+				}
+				409 = {
+					add_core = THIS
+					remove_core = FRA
+					secede_province = THIS
+				}
+				412 = {
+					add_core = THIS
+					remove_core = FRA
+					secede_province = THIS
+				}
+			}
+		}
+	}
+}
