@@ -1,0 +1,1153 @@
+### Army ###
+
+medium_tank = {
+	limit = {
+		modern_artillery = 1
+		invention = tank_experiments
+	}
+	news = no
+	chance = {
+		base = 5
+		modifier = {
+			factor = -9
+			not = { invention = tank_experiments }
+		}
+		modifier = {
+			factor = 2
+			invention = light_tank
+		}
+		modifier = {
+			factor = 2
+			war = yes
+		}
+	}
+	effect = {
+		tank = {
+			attack = 5
+			support = 0.15
+			supply_consumption = 0.25
+		}
+	}
+}
+heavy_tank = {
+	limit = {
+		modern_artillery = 1
+		invention = tank_experiments
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 5
+		modifier = {
+			factor = -100
+			not = { invention = tank_experiments }
+		}
+		modifier = {
+			factor = 2
+			invention = medium_tank
+		}
+		modifier = {
+			factor = 2
+			war = yes
+		}
+	}
+	effect = {
+		tank = {
+			defence = 5
+			support = 0.15
+			supply_consumption = 0.33
+		}
+	}
+}
+guerrilla_warfare_doctrine = {
+	limit = { modern_army_doctrine_1920 = 1 }
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		irregular = {
+			attack = 6
+			defence = 6
+			reconnaissance = 1
+			maximum_speed = 2
+		}
+		infantry = {
+			attack = 1
+			defence = 1
+		}
+		cavalry = {
+			attack = 5
+			defence = 5
+			reconnaissance = 1
+			maximum_speed = 2
+		}
+	}
+}
+great_war_infantry = {
+	limit = {
+		modern_divisional_structure = 1
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		infantry = {
+			attack = 4
+			defence = 3
+		}
+		stormtrooper = {
+			attack = 4
+			defence = 3
+		}
+		guard = {
+			attack = 4
+			defence = 3
+		}
+		engineer = {
+			attack = 3
+			defence = 3
+		}
+		irregular = {
+			attack = 2
+			defence = 2.5
+		}
+		army_base = {
+			supply_consumption = 0.05
+		}
+	}
+}
+great_war_cavalry = {
+	limit = {
+		modern_divisional_structure = 1
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		cuirassier = {
+			attack = 3
+			defence = 4
+			reconnaissance = 1
+		}
+		dragoon = {
+			attack = 3
+			defence = 4
+			reconnaissance = 1
+		}
+		hussar = {
+			attack = 3
+			defence = 4
+			reconnaissance = 1
+		}
+		cavalry = {
+			attack = 2
+			defence = 3
+			reconnaissance = 1
+		}
+		army_base = {
+			supply_consumption = 0.05
+		}
+	}
+}
+motorised_infantry_doctrine = {
+	limit = {
+		modern_army_doctrine_1920 = 1
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		guard = {
+			attack = 2
+			defence = 3
+			maximum_speed = 1
+		}
+		stormtrooper = {
+			attack = 3
+			defence = 2
+			maximum_speed = 1
+		}
+	}
+}
+school_of_maneuver = {
+	limit = {
+		modern_army_doctrine_1920 = 1
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		tank = {
+			attack = 4
+			defence = 2
+			support = 0.5
+		}
+	}
+}
+self_propelled_artillery = {
+	limit = { modern_artillery = 1 }
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			invention = light_artillery
+		}
+		modifier = {
+			factor = 2
+			invention = medium_artillery
+		}
+		modifier = {
+			factor = 2
+			invention = heavy_artillery
+		}
+		modifier = {
+			factor = 2
+			war = yes
+		}
+	}
+	effect = {
+		artillery = {
+			maximum_speed = 1
+			attack = 2.5
+			defence = 1
+		}
+	}
+}
+aerial_support = {
+	limit = {
+		modern_military_science = 1
+	}
+	news = no
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			indirect_artillery_fire = 1
+		}
+		modifier = {
+			factor = 2
+			invention = signal_detachments
+		}
+		modifier = {
+			factor = 2
+			invention = synchronized_heavy_support
+		}
+		modifier = {
+			factor = 2
+			invention = elastic_defense_system
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			war_countries = { invention = aerial_support }
+		}
+		modifier = {
+			factor = 2
+			year = 1930
+		}
+	}
+	effect = {
+		army_base = {
+			discipline = 0.05
+		}
+	}
+}
+school_of_firepower = {
+	limit = { great_war_experience = 1 }
+	news = no
+	chance = {
+		base = 5
+	}
+	effect = {
+		army_base = {
+			attack = 1
+		}
+	}
+}
+radio_coordination = {
+	limit = { modern_army_leadership = 1 }
+	news = no
+	chance = {
+		base = 3
+	}
+	effect = {
+		army_base = {
+			discipline = 0.05
+			maximum_speed = 0.5
+		}
+	}
+}
+
+### Commerce ###
+
+just_in_time_production = {
+	limit = {
+		modern_business_management = 1
+	}
+	news = no
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			trade_unions = all_trade_unions
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+quality_management = {
+	limit = {
+		modern_business_management = 1
+	}
+	news = no
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			trade_unions = all_trade_unions
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+customer_service = {
+	limit = {
+		modern_business_management = 1
+	}
+	news = no
+	chance = {
+		base = 3
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 2
+			trade_unions = all_trade_unions
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+The_New_Deal ={
+	limit = {
+		globalized_markets = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = interventionism
+		}
+	}
+	effect = {
+		rgo_output = 0.025
+		factory_throughput = 0.025
+	}
+}
+multinational_corporations = {
+	limit = {
+		globalized_markets = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 3
+		modifier = {
+			factor = -1
+			or = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = communist
+				ruling_party_ideology = fascist
+			}
+		}
+		modifier = {
+			factor = 2
+			or = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	effect = {
+		factory_input = -0.01
+	}
+}
+neoliberalguy = {
+	limit = {
+		neoliberal_theory = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			is_ideology_enabled = socialist
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = socialist
+		}
+	}
+	effect = {
+		permanent_prestige = 1
+	}
+}
+hedgefonds = {
+	limit = {
+		modern_financial_institutions = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				nationalvalue = nv_liberty
+				nationalvalue = nv_glory
+			}
+		}
+		modifier = {
+			factor = 2
+			nationalvalue = nv_freedom
+		}
+		modifier = {
+			factor = 3
+			nationalvalue = nv_prosperity
+		}
+	}
+	effect = {
+		tax_eff = 2.5
+	}
+}
+floating_exchange_rates = {
+	limit = {
+		modern_monetary_system = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			economic_policy = laissez_faire
+		}
+	}
+	effect = {
+		factory_output = 0.01
+	}
+}
+
+### Culture ###
+
+color_motion_picture = {
+	limit = {
+	humanistic_psychology = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_consciousness = 3
+		}
+	}
+	effect = {
+		shared_prestige = 50
+	}
+}
+cinematographic_propaganda = {
+	limit = {
+	humanistic_psychology = 1
+	}
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			war = yes
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				ruling_party_ideology = fascist
+				ruling_party_ideology = communist
+			}
+		}
+	}
+	core_pop_consciousness_modifier = -0.01
+}
+revanchism = {
+	limit = { post_colonialism = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 1
+			revanchism = 0.01
+		}
+		modifier = {
+			factor = 5
+			revanchism = 0.05
+		}
+		modifier = {
+			factor = 1
+			or = {
+				ruling_party_ideology = fascist
+				ruling_party_ideology = communist
+				ruling_party_ideology = reactionary
+			}
+		}
+		modifier = {
+			factor = 1
+			or = {
+				government = proletarian_dictatorship
+				government = fascist_dictatorship
+			}
+		}
+	}
+	core_pop_militancy_modifier = 0.01
+	effect = {
+		rebel_org_gain = {
+			faction = fascist_rebels
+			value = 0.50
+		}
+		rebel_org_gain = {
+			faction = communist_rebels
+			value = 0.50
+		}
+	}
+}
+mussolini = {
+	limit = {
+		mass_politics = 1
+	}
+	news = no
+	chance = {
+		base = 3
+		modifier = {
+			factor = -3
+			ruling_party_ideology = communist
+		}
+		modifier = {
+			factor = -2
+			invention = lenin
+		}
+	}
+	effect = {
+		shared_prestige = 10
+	}
+}
+lenin = {
+	limit = {
+		mass_politics = 1
+	}
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 3
+			ruling_party_ideology = communist
+		}
+		modifier = {
+			factor = -3
+			ruling_party_ideology = fascist
+		}
+		modifier = {
+			factor = 1
+			economic_policy = planned_economy
+		}
+		modifier = {
+			factor = -2
+			invention = mussolini
+		}
+	}
+	effect = {
+		shared_prestige = 10
+	}
+}
+mahatma_gandhi = {
+	limit = {
+		post_colonialism = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -1
+			NOT = { invention = the_revolt_of_the_masses }
+		}
+		modifier = {
+			factor = 2
+			year = 1930
+		}
+		modifier = {
+			factor = -10
+			not = { colonial_nation = yes }
+		}
+	}
+	non_accepted_pop_consciousness_modifier = 0.01
+	effect = {
+		shared_prestige = 10
+	}
+}
+systems_theory = {
+	limit = {
+		mathematical_sociology = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -1
+			NOT = { invention = the_revolt_of_the_masses }
+		}
+		modifier = {
+			factor = 2
+			post_colonialism = 1
+		}
+	}
+	effect = {
+		shared_prestige = 10
+	}
+}
+frankfurt_school = {
+	limit = { critical_theory = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 2
+			invention = nihilism_and_the_will
+		}
+	}
+	core_pop_consciousness_modifier = 0.01
+	effect = {
+		shared_prestige = 30
+	}
+}
+theodor_w_adorno = {
+	limit = {
+		critical_theory = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			NOT = { invention = frankfurt_school }
+		}
+		modifier = {
+			factor = 2
+			modern_aesthetics = 1
+		}
+	}
+	effect = {
+		shared_prestige = 5
+	}
+}
+max_horkheimer = {
+	limit = {
+		critical_theory = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			NOT = { invention = frankfurt_school }
+		}
+		modifier = {
+			factor = 2
+			modern_aesthetics = 1
+		}
+	}
+	effect = {
+		shared_prestige = 5
+	}
+}
+walter_benjamin = {
+	limit = {
+		critical_theory = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			NOT = { invention = frankfurt_school }
+		}
+		modifier = {
+			factor = 2
+			modern_aesthetics = 1
+		}
+	}
+	effect = {
+		shared_prestige = 5
+	}
+}
+erich_fromm = {
+	limit = {
+		critical_theory = 1
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -2
+			NOT = { invention = frankfurt_school }
+		}
+		modifier = {
+			factor = 2
+			modern_aesthetics = 1
+		}
+	}
+	effect = {
+		shared_prestige = 5
+	}
+}
+roaring_twenties = {
+	limit = { modern_aesthetics = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -1
+			not = { social_alienation = 1 }
+		}
+	}
+	effect = {
+		shared_prestige = 75
+	}
+}
+art_deco = {
+	limit = { modern_aesthetics = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -1
+			not = { behaviorism = 1 }
+		}
+	}
+	effect = {
+		shared_prestige = 75
+	}
+}
+epic_theatre = {
+	limit = { modern_aesthetics = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -1
+			not = { behaviorism = 1 }
+		}
+	}
+	effect = {
+		shared_prestige = 75
+	}
+}
+tv_network = {
+	limit = {
+		humanistic_psychology = 1
+	}
+	news = no
+	chance = {
+		base = 3
+		modifier = {
+			factor = -3
+			NOT = { year = 1925 }
+		}
+		modifier = {
+			factor = -3
+			NOT = { invention = the_television }
+		}
+	}
+	core_pop_consciousness_modifier = -0.01
+	effect = {
+		shared_prestige = 50
+	}
+}
+
+### Industry ###
+
+substitute_materials = {
+	limit = { modern_chemistry = 1 }
+	news = no
+	chance = {
+		base = 6
+		modifier = {
+			factor = -6
+			not = { invention = import_substitution_industrialization }
+		}
+	}
+	effect = {
+		factory_goods_output = {
+			oil = 0.1
+		}
+		factory_goods_output = {
+			fuel = 0.05
+		}
+	}
+}
+industrial_electrolysis = {
+	limit = { modern_chemistry = 1 }
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		factory_goods_output = {
+			steel = 0.05
+		}
+		factory_goods_output = {
+			cement = 0.05
+		}
+		rgo_goods_output = {
+			oil = 0.1
+		}
+	}
+}
+electrometallurgy = {
+	limit = { modern_metallurgy = 1 }
+	news = no
+	chance = {
+		base = 5
+	}
+	effect = {
+		factory_goods_throughput = {
+			steel = 0.05
+		}
+	}
+}
+modern_public_transportation = {
+	limit = { modern_infrastructure = 1 }
+	news = no
+	chance = {
+		base = 5
+	}
+	effect = {
+		factory_throughput = 0.025
+		rgo_output = 0.025
+	}
+}
+mechanized_wells = {
+	limit = { shift_work = 1 }
+	news = no
+	chance = {
+		base = 5
+	}
+	effect = {
+		rgo_goods_output = {
+			oil = 0.2
+		}
+	}
+}
+precision_machinery = {
+	limit = { mechanized_manufacture = 1 }
+	news = no
+	chance = {
+		base = 5
+	}
+	effect = {
+		factory_goods_output = {
+			radio = 0.02
+		}
+		factory_goods_output = {
+			machine_parts = 0.02
+		}
+		factory_goods_output = {
+			telephones = 0.02
+		}
+		factory_goods_output = {
+			electric_gear = 0.02
+		}
+		factory_goods_output = {
+			automobiles = 0.02
+		}
+		factory_goods_output = {
+			aeroplanes = 0.02
+		}
+		factory_goods_output = {
+			barrels = 0.02
+		}
+	}
+}
+mechanized_assembly_line = {
+	limit = { mechanized_manufacture = 1 }
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			year = 1925
+		}
+	}
+	effect = {
+		factory_throughput = 0.05
+	}
+}
+automated_production_processes = {
+	limit = { mechanized_manufacture = 1 }
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			year = 1930
+		}
+	}
+	effect = {
+		factory_throughput = 0.05
+	}
+}
+household_electrification = {
+	limit = {
+		modern_power_generation = 1
+	}
+	news = no
+	chance = {
+		base = 5
+		modifier = {
+			factor = -5
+			not = { electricity = 1 }
+		}
+	}
+	effect = {
+		factory_throughput = 0.05
+		rgo_output = 0.05
+	}
+}
+valve_radio_sets = {
+	limit = {
+		modern_power_generation = 1
+	}
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			invention = tetrode
+		}
+		modifier = {
+			factor = 2
+			invention = triode
+		}
+	}
+	effect = {
+		factory_goods_output = { radio = 0.02 }
+	}
+}
+triode = {
+	limit = {
+		modern_power_generation = 1
+	}
+	news = no
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			invention = edison_light_bulb
+		}
+		modifier = {
+			factor = 1
+			invention = bell_n_greys_telephones
+		}
+		modifier = {
+			factor = 1
+			invention = direct_current
+		}
+		modifier = {
+			factor = 1
+			invention = alternating_current
+		}
+	}
+	effect = {
+		factory_goods_output = { electric_gear = 0.01 }
+	}
+}
+tetrode = {
+	limit = {
+		modern_power_generation = 1
+		invention = triode
+	}
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = -4
+			not = { invention = triode }
+		}
+		modifier = {
+			factor = 1
+			invention = direct_current
+		}
+		modifier = {
+			factor = 1
+			invention = alternating_current
+		}
+	}
+	effect = {
+		factory_goods_output = { electric_gear = 0.02 }
+	}
+}
+synthetic_opioids = {
+	limit = {
+		mechanized_manufacture = 1
+	}
+	news = no
+	chance = {
+		base = 3
+	}
+	effect = {
+		rgo_goods_output = {
+			opium = 0.2
+		}
+	}
+}
+the_television = {
+	limit = {
+		modern_power_generation = 1
+	}
+	news = no
+	chance = {
+		base = 3
+	}
+	effect = {
+		factory_goods_output = { electric_gear = 0.03 }
+	}
+}
+autobahn = {
+	limit = { modern_infrastructure = 1 }
+	news = no
+	chance = {
+		base = 5
+	}
+	effect = {
+		shared_prestige = 30
+	}
+}
+
+### Navy ###
+
+convoy_sailing = {
+	limit = {
+		modern_naval_doctrine_1920 = 1
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		steam_transport = {
+			maximum_speed = 1
+			hull = 3
+			supply_consumption = 0.2
+		}
+	}
+}
+fleet_auxiliary_ss_doctrine = {
+	limit = {
+		modern_naval_doctrine_1920 = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		submarine = {
+			gun_power = 2
+		}
+	}
+}
+16_inch_armament = {
+	limit = {
+		modern_naval_design_1920 = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		dreadnought = {
+			gun_power = 2
+		}
+	}
+}
+dual_purpose_guns = {
+	limit = {
+		modern_naval_design_1920 = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		cruiser = {
+			gun_power = 2
+			hull = 2
+		}
+	steam_transport = {
+		gun_power = 1
+		hull = 1
+		maximum_speed = 1
+	}
+		dreadnought = {
+			gun_power = 2
+			hull = 2
+		}
+	}
+}
+modern_fire_control = {
+	limit = {
+		modern_naval_design_1920 = 1
+		has_country_flag = existing_country
+	}
+	news = no
+	chance = {
+		base = 6
+	}
+	effect = {
+		dreadnought = {
+			gun_power = 4
+		}
+		submarine = {
+	gun_power = 2
+	torpedo_attack = 4
+		}
+		cruiser = {
+			gun_power = 4
+		}
+	}
+}
