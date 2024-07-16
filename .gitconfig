@@ -1,3 +1,0 @@
-[filter "windows-1252"]
-    clean = iconv -f utf-8 -t windows-1252
-    smudge = iconv -f windows-1252 -t utf-8
