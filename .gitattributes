@@ -15,9 +15,3 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
-
-# Ensure .txt and .csv files use LF line endings and Windows-1252 encoding
-*.txt    text eol=lf
-*.csv    text eol=lf
-*.txt    filter=windows-1252
-*.csv    filter=windows-1252
