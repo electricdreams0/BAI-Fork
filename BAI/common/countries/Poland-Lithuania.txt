@@ -18,7 +18,7 @@ party = {
 party = {
 	name = "PLC_liberal"
 	start_date = 1820.1.1
-	end_date = 1936.1.1
+	end_date = 2000.1.1
 
 	ideology = liberal
 
@@ -82,7 +82,7 @@ party = {
 	trade_policy = free_trade
 	religious_policy = pro_atheism
 	citizenship_policy = full_citizenship
-	war_policy = pacifism 
+	war_policy = jingoism 
 }
 
 party = {
@@ -110,7 +110,7 @@ unit_names = {
 		
 	}
 	cruiser = {
-		"Józef Pilsudski" "Józef Chlopicki" "Michal Gedeon Radziwill" Miedzymorze "Adam Czartoryski" "Wladyslaw Czartoryski" "Aleksander Waszkowski" "Konstanty Kalinowski"
+		"Jï¿½zef Pilsudski" "Jï¿½zef Chlopicki" "Michal Gedeon Radziwill" Miedzymorze "Adam Czartoryski" "Wladyslaw Czartoryski" "Aleksander Waszkowski" "Konstanty Kalinowski"
 	}
 	frigate = {
 		Mindaugas Butigeidis Vytenis Gediminas Algirdas Kestutis Jogaila "Vytautas Didysis" "Zygimantas Kestutaitis"
@@ -125,6 +125,6 @@ unit_names = {
 		
 	}
 	commerce_raider = {
-		 Wisla Odra Windawa Bartów Neman Dniprer Prypec
+		 Wisla Odra Windawa Bartï¿½w Neman Dniprer Prypec
 	}
 }

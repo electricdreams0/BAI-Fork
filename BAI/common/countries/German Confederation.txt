@@ -166,7 +166,7 @@ party = {
 	trade_policy = protectionism
 	religious_policy = pro_atheism
 	citizenship_policy = full_citizenship
-	war_policy = pacifism
+	war_policy = pro_military
 }
 
 party = {
@@ -269,12 +269,12 @@ unit_names = {
 		Beowulf Biene Bremse Brummer Camaeleon Crocodill Frithjof Hagen Heimdall Hildebrand Hummel
 		Mosel Mücke Natter Odin Rhein Sachsen Salamander Scorpion Siegfried Viper Wespe Württemberg
 	}
-	clipper_transport = { 
+	clipper_transport = {
 		"1. Klipperflottille" "2. Klipperflottille" "3. Klipperflottille" "4. Klipperflottille"
 		"5. Klipperflottille" "6. Klipperflottille" "7. Klipperflottille" "8. Klipperflottille"
 		"9. Klipperflottille" "10. Klipperflottille"
 	}
-	steam_transport = { 
+	steam_transport = {
 	}
 	commerce_raider = {
 		"Novara" "Schwarzenberg" "Helgoland" "Frundsberg" "Aurora" "Saida" "Nautilus" "Albatros"
