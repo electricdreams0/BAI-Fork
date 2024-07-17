@@ -1,6 +1,6 @@
 political_decisions = {
 	switch_to_army_tech = {
-		alert = no
+		alert = yes
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
@@ -28,9 +28,9 @@ political_decisions = {
 			tech_school = army_tech_school
 		}
 	}
-	
+
 	switch_to_navy_tech = {
-		alert = no
+		alert = yes
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
@@ -60,9 +60,9 @@ political_decisions = {
 			tech_school = naval_tech_school
 		}
 	}
-	
+
 	switch_to_culture_tech = {
-		alert = no
+		alert = yes
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
@@ -90,9 +90,9 @@ political_decisions = {
 			tech_school = culture_tech_school
 		}
 	}
-	
+
 	switch_to_trade_tech = {
-		alert = no
+		alert = yes
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
@@ -119,9 +119,9 @@ political_decisions = {
 			tech_school = commerce_tech_school
 		}
 	}
-	
+
 	switch_to_industry_tech = {
-		alert = no
+		alert = yes
 		potential = {
 			civilized = yes
 			tech_school = traditional_academic
@@ -149,15 +149,16 @@ political_decisions = {
 			tech_school = industrial_tech_school
 		}
 	}
-	
+
 	switch_to_traditional_academic = {
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			NOT = { tech_school = traditional_academic }
 			ai = no
 			civilized = yes
 		}
-		
+
 		allow = {
 			NOT = { has_country_modifier = academic_confusion }
 			prestige = 45

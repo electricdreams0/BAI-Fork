@@ -36,6 +36,10 @@ disable_harder_ai_title;Disable Harder AI;;;;;;;;;;;;;
 disable_harder_ai_desc;This will cause the AI to not use tariffs more effectively, making the AI have less money and be easier.;;;;;;;;;;;;;
 permanently_hide_options_title;Permanently Hide all Options Decisions.;;;;;;;;;;;;;
 permanently_hide_options_desc;This decision will permanently hide the decisions for additional features to reduce clutter.;;;;;;;;;;;;;
+enable_utilities_title;Show Utility Decisions;;;;;;;;;;;x;;;;;;;;;;
+enable_utilities_desc;This shows some decisions with situational use that otherwise clutter the decision menu.;;;;;;;;;;;x;;;;;;;;;;
+disable_utilities_title;Hide Utility Decisions;;;;;;;;;;;x;;;;;;;;;;
+disable_utilities_desc;This hides some decisions with situational use that otherwise clutter the decision menu.;;;;;;;;;;;x;;;;;;;;;;
 EVTNAME99930;Splendid Isolation;;;;;;;;;;;;x
 EVTDESC99930;It is the duty of the Government of this country, placed as it is with regard to geographical position, to keep itself upon terms of goodwill with all surrounding nations, but not to entangle itself with any single or monopolising alliance with any one of them, above all to endeavour not to interfere needlessly and vexatiously with the internal affairs of any foreign country. - Lord Edward Stanley, Secretary of State for Foreign Affairs. \n\nThe policy of 'splendid isolation' was characterised by Britain's reluctance to enter into permanent European alliances or commitments with the other great powers. During the late 19th century, Britain's primary goal in foreign policy was to maintain the balance of power in Europe and to intervene if that balance was upset. Its secondary goal was to protect its overseas interest in the colonies and dominions, as free trade kept the Empire alive.;;;;;;;;;;;x
 EVTNAME99931;Russian Isolation;;;;;;;;;;;;x
