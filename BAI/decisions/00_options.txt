@@ -224,7 +224,6 @@ political_decisions = {
 			NOT = { has_global_flag = permanently_hide_options }
 		}
 		allow = {
-
 		}
 
 		effect = {
@@ -293,7 +292,6 @@ political_decisions = {
 			NOT = { has_global_flag = permanently_hide_options }
 		}
 		allow = {
-
 		}
 
 		effect = {
@@ -341,6 +339,40 @@ political_decisions = {
 		}
 
 		ai_will_do = { factor = 0 }
+	}
+
+	#
+	# Utility Options
+	#
+	enable_utilities = {
+		picture = address_the_nation
+		alert = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = utility_options }
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = utility_options
+		}
+	}
+	disable_utilities = {
+		picture = address_the_nation
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = utility_options
+		}
+
+		allow = {
+		}
+
+		effect = {
+			clr_country_flag = utility_options
+		}
 	}
 
 }

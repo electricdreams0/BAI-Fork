@@ -129,6 +129,13 @@ promotion_focus = {
 		soldiers = 0.20 #20% more likely to become this type
 		icon = 15
 		outliner_show_as_percent = yes
+		limit = {
+			OR = {
+			owner = { ai = no }
+			NOT = { state_scope = { soldiers = 0.048 } }
+			}
+		}
+
 	}
 }
 

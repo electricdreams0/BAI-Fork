@@ -3,6 +3,7 @@ political_decisions = {
 	picture = remove_undesireables
 	alert = no
 		potential = {
+			has_country_flag = utility_options
 			ideological_thought = 1
 			has_pop_culture = turkish
 			NOT = {
@@ -32,7 +33,7 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			NOT = { 
+			NOT = {
 				relation = {
 					who = TUR
 					value = 0
@@ -53,7 +54,7 @@ political_decisions = {
 				reduce_pop = 0.35
 				militancy = 9
 				consciousness = 6
-			}		
+			}
 			any_pop = {
 				limit = {
 					is_primary_culture = no
@@ -105,7 +106,7 @@ political_decisions = {
 					ideology = anarcho_liberal
 					factor = 1
 				}
-			}		
+			}
 			add_country_modifier = {
 				name = kebabbies
 				duration = 3650
@@ -143,6 +144,7 @@ political_decisions = {
 		picture = leave_soi
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			state_n_government = 1
 			NOT = {
 				has_country_modifier = war_encouraged
@@ -232,7 +234,7 @@ political_decisions = {
 			upper_house = {
 				ideology = conservative
 				value = 0.10
-			}  			
+			}
 			add_country_modifier = {
 				name = war_encouraged
 				duration = 1095
@@ -240,12 +242,13 @@ political_decisions = {
 		}
 		ai_will_do = {
 			factor = 0
-		}	
-	}	
+		}
+	}
 
 	remove_undesireables = {
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			OR = {
 				government = absolute_monarchy
 				government = prussian_constitutionalism
@@ -372,6 +375,7 @@ political_decisions = {
 		picture = remove_undesireables
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			NOT = {
 				has_country_modifier = kebabbies
 				has_country_modifier = kebabbies_wait
@@ -439,7 +443,7 @@ political_decisions = {
 					ideology = anarcho_liberal
 					factor = 2
 				}
-			}	
+			}
 			add_country_modifier = {
 				name = kebabbies
 				duration = 3650
@@ -464,6 +468,7 @@ political_decisions = {
 		picture = remove_undesireables
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			has_country_modifier = kebabbies
 			ideological_thought = 1
 			NOT = {
@@ -510,6 +515,7 @@ political_decisions = {
 	reinstitute_slavery_USA = {
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			tag = USA
 			year = 1870
 			OR = {
@@ -567,6 +573,7 @@ political_decisions = {
 		picture = election_polls
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			NOT = { vote_franschise = none_voting }
 			NOT = {
 				has_country_flag = silent_elections
@@ -592,6 +599,7 @@ political_decisions = {
 		picture = election_polls
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			NOT = { vote_franschise = none_voting }
 			NOT = {
 				government = fascist_dictatorship
@@ -708,7 +716,7 @@ political_decisions = {
 			number_of_states = 2
 			num_of_ports = 1
 		}
-		
+
 		allow = {
 			war = no
 			is_greater_power = no
@@ -724,13 +732,13 @@ political_decisions = {
 			}
 			money = 120000
 		}
-		
+
 		effect = {
 			set_country_flag = come_to_the_new_world
 			treasury = -100000
 			add_country_modifier = { name = small_immigration_boom duration = 730 }
 		}
-		
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -832,11 +840,11 @@ political_decisions = {
 				AND = { tag = CLC owns = 894 NOT = { capital = 894 } }
 			}
 		}
-		
+
 		allow = {
 			war = no
 		}
-		
+
 		effect = {
 			random_owned = { limit = { owner = { tag = KOR } } owner = { capital = 1624 } }
 			random_owned = { limit = { owner = { tag = KAZ } } owner = { capital = 1181 } }
@@ -928,7 +936,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { tag = KDS } } owner = { capital = 893 } }
 			random_owned = { limit = { owner = { tag = CLC } } owner = { capital = 894 } }
 		}
-		
+
 		ai_will_do = { factor = 1 }
 	}
 
@@ -936,6 +944,7 @@ political_decisions = {
 		picture = gtfo
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			civilized = yes
 			any_owned_province = {
 				any_core = {
@@ -1267,6 +1276,7 @@ political_decisions = {
 		picture = embrace_minority
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			state_n_government = 1
 			NOT = { has_country_flag = border_control }
 			NOT = { has_country_modifier = border_control }
@@ -1341,6 +1351,7 @@ political_decisions = {
 		picture = embrace_minority
 		alert = no
 		potential = {
+			has_country_flag = utility_options
 			OR = {
 				has_country_flag = border_control
 				has_country_modifier = border_control
