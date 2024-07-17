@@ -9,7 +9,7 @@ country_event = {
 	title = "EVTNAME98655" #Hungarians Agree to Federation
 	desc = "EVTDESC98655"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -21,168 +21,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 3
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = HUN }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_hungarian_approval
-	}
-}
-
-country_event = {
-	id = 98656
-	title = "EVTNAME98656" #The Hungarian Counter-Proposal
-	desc = "EVTDESC98656"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		is_possible_vassal = HUN
-		NOT = {
-			HUN = { exists = yes }
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 4
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = HUN }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = HUN }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = HUN }
-				average_militancy = 5
-			}
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = "We agree. Hungary will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_hungarian_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_hungarian_approval
-		any_pop = {
-			limit = { has_pop_culture = hungarian }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 20
-		}
-	}
-}
-
-country_event = {
-	id = 98657
-	title = "EVTNAME98657" #The Hungarians Refuse Federation
-	desc = "EVTDESC98657"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		NOT = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 5
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = HUN }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = HUN }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = HUN }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 75
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_hungarian_approval
-		any_pop = {
-			limit = { has_pop_culture = hungarian }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 25
-		}
 	}
 }
 
@@ -191,7 +37,7 @@ country_event = {
 	title = "EVTNAME98660" #Czechs Agree to Federation
 	desc = "EVTDESC98660"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -209,197 +55,24 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.5
-			accepted_culture = czech
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = BOH }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_czech_approval
 	}
 }
 
-country_event = {
-	id = 98661
-	title = "EVTNAME98661" #The Czech Counter-Proposal
-	desc = "EVTDESC98661"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = BOH }
-		is_possible_vassal = BOH
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			BOH = { exists = yes }
-			has_global_flag = full_czech_approval
-			has_global_flag = partial_czech_approval
-			has_global_flag = no_czech_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = BOH }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = BOH }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = BOH }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.75
-			accepted_culture = czech
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Bohemia will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_czech_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_czech_approval
-		any_pop = {
-			limit = { has_pop_culture = czech }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98662
-	title = "EVTNAME98662" #The Czechs Refuse Federation
-	desc = "EVTDESC98662"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = BOH }
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_czech_approval
-			has_global_flag = partial_czech_approval
-			has_global_flag = no_czech_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = BOH }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = BOH }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = BOH }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_czech_approval
-		any_pop = {
-			limit = { has_pop_culture = czech }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
-	}
-}
 
 country_event = {
 	id = 98665
 	title = "EVTNAME98665" #Romanians Agree to Federation
 	desc = "EVTDESC98665"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -417,188 +90,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 12
-		modifier = { 
-			factor = 2
-			ROM = { exists = yes }
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = ROM }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_romanian_approval
-	}
-}
-
-country_event = {
-	id = 98666
-	title = "EVTNAME98666" #The Romanian Counter-Proposal
-	desc = "EVTDESC98666"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = SIE }
-		is_possible_vassal = SIE
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			SIE = { exists = yes }
-			has_global_flag = full_romanian_approval
-			has_global_flag = partial_romanian_approval
-			has_global_flag = no_romanian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SIE }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SIE }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SIE }
-				average_militancy = 5
-			}
-		}
-		modifier = { 
-			factor = 1.5
-			ROM = { exists = yes }
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Transylvania will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_romanian_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_romanian_approval
-		any_pop = {
-			limit = { has_pop_culture = romanian }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98667
-	title = "EVTNAME98667" #The Romanians Refuse Federation
-	desc = "EVTDESC98667"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = ROM }
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_romanian_approval
-			has_global_flag = partial_romanian_approval
-			has_global_flag = no_romanian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = ROM }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = ROM }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = ROM }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_romanian_approval
-		any_pop = {
-			limit = { has_pop_culture = romanian }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
 	}
 }
 
@@ -607,7 +106,7 @@ country_event = {
 	title = "EVTNAME98670" #Croatians Agree to Federation
 	desc = "EVTDESC98670"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -625,188 +124,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.5
-			accepted_culture = croat
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = CRO }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_croatian_approval
-	}
-}
-
-country_event = {
-	id = 98671
-	title = "EVTNAME98671" #The Croatian Counter-Proposal
-	desc = "EVTDESC98671"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = CRO }
-		is_possible_vassal = CRO
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			CRO = { exists = yes }
-			has_global_flag = full_croatian_approval
-			has_global_flag = partial_croatian_approval
-			has_global_flag = no_croatian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = CRO }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = CRO }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = CRO }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.75
-			accepted_culture = croat
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Croatia will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_croatian_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_croatian_approval
-		any_pop = {
-			limit = { has_pop_culture = croat }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98672
-	title = "EVTNAME98672" #The Croatians Refuse Federation
-	desc = "EVTDESC98672"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = CRO }
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_croatian_approval
-			has_global_flag = partial_croatian_approval
-			has_global_flag = no_croatian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = CRO }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = CRO }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = CRO }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_croatian_approval
-		any_pop = {
-			limit = { has_pop_culture = croat }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
 	}
 }
 
@@ -815,7 +140,7 @@ country_event = {
 	title = "EVTNAME98675" #Slovenes Agree to Federation
 	desc = "EVTDESC98675"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -833,188 +158,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.5
-			accepted_culture = slovene
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = SLO }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_slovene_approval
-	}
-}
-
-country_event = {
-	id = 98676
-	title = "EVTNAME98676" #The Slovene Counter-Proposal
-	desc = "EVTDESC98676"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = SLO }
-		is_possible_vassal = SLO
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			SLO = { exists = yes }
-			has_global_flag = full_slovene_approval
-			has_global_flag = partial_slovene_approval
-			has_global_flag = no_slovene_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SLO }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SLO }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SLO }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.75
-			accepted_culture = slovene
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Slovenia will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_slovene_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_slovene_approval
-		any_pop = {
-			limit = { has_pop_culture = slovene }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98677
-	title = "EVTNAME98677" #The Slovenes Refuse Federation
-	desc = "EVTDESC98677"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = SLO }
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_slovene_approval
-			has_global_flag = partial_slovene_approval
-			has_global_flag = no_slovene_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = SLO }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = SLO }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = SLO }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_slovene_approval
-		any_pop = {
-			limit = { has_pop_culture = slovene }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
 	}
 }
 
@@ -1023,7 +174,7 @@ country_event = {
 	title = "EVTNAME98680" #Slovakians Agree to Federation
 	desc = "EVTDESC98680"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -1041,180 +192,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = SLV }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_slovakian_approval
-	}
-}
-
-country_event = {
-	id = 98681
-	title = "EVTNAME98681" #The Slovakian Counter-Proposal
-	desc = "EVTDESC98681"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = SLV }
-		is_possible_vassal = SLV
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			SLV = { exists = yes }
-			has_global_flag = full_slovakian_approval
-			has_global_flag = partial_slovakian_approval
-			has_global_flag = no_slovakian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SLV }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SLV }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = SLV }
-				average_militancy = 5
-			}
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Slovakia will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_slovakian_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_slovakian_approval
-		any_pop = {
-			limit = { has_pop_culture = slovak }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98682
-	title = "EVTNAME98682" #The Slovakians Refuse Federation
-	desc = "EVTDESC98682"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = SLV }
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_slovakian_approval
-			has_global_flag = partial_slovakian_approval
-			has_global_flag = no_slovakian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = SLV }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = SLV }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = SLV }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_slovakian_approval
-		any_pop = {
-			limit = { has_pop_culture = slovak }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
 	}
 }
 
@@ -1223,7 +208,7 @@ country_event = {
 	title = "EVTNAME98685" #Polish Agree to Federation
 	desc = "EVTDESC98685"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -1241,189 +226,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.5
-			accepted_culture = polish
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = POL }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_polish_approval
-	}
-}
-
-country_event = {
-	id = 98686
-	title = "EVTNAME98686" #The Polish Counter-Proposal
-	desc = "EVTDESC98686"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = GLM }
-		is_possible_vassal = GLM
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			GLM = { exists = yes }
-			POL = { exists = yes }
-			has_global_flag = full_polish_approval
-			has_global_flag = partial_polish_approval
-			has_global_flag = no_polish_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = GLM }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = GLM }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = GLM }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.75
-			accepted_culture = polish
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Galicia-Lodomeria will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_polish_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_polish_approval
-		any_pop = {
-			limit = { has_pop_culture = polish }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98687
-	title = "EVTNAME98687" #The Polish Refuse Federation
-	desc = "EVTDESC98687"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = POL }
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_polish_approval
-			has_global_flag = partial_polish_approval
-			has_global_flag = no_polish_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = POL }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = POL }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = POL }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_polish_approval
-		any_pop = {
-			limit = { has_pop_culture = polish }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
 	}
 }
 
@@ -1432,7 +242,7 @@ country_event = {
 	title = "EVTNAME98688" #Silesian Agree to Federation
 	desc = "EVTDESC98688"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -1454,217 +264,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.5
-			accepted_culture = north_german
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = {
-						is_core = SLS
-						NOT = { is_core = BOH }
-					}
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_silesian_approval
-	}
-}
-
-country_event = {
-	id = 98689
-	title = "EVTNAME98689" #The Silesian Counter-Proposal
-	desc = "EVTDESC98689"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = {
-			is_core = SLS
-			NOT = { is_core = BOH }
-		}
-		is_possible_vassal = SLS
-		has_country_flag = austrian_silesia
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			SLS = { exists = yes }
-			has_global_flag = full_silesian_approval
-			has_global_flag = partial_silesian_approval
-			has_global_flag = no_silesian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = {
-					is_core = SLS
-					NOT = { is_core = BOH }
-				}
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = {
-					is_core = SLS
-					NOT = { is_core = BOH }
-				}
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = {
-					is_core = SLS
-					NOT = { is_core = BOH }
-				}
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.75
-			accepted_culture = north_german
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Silesia will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_silesian_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_silesian_approval
-		any_pop = {
-			limit = { has_pop_culture = north_german }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98696
-	title = "EVTNAME98696" #The Silesians Refuse Federation
-	desc = "EVTDESC98696"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = {
-			is_core = SLS
-			NOT = { is_core = BOH }
-		}
-		has_country_flag = austrian_silesia
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_silesian_approval
-			has_global_flag = partial_silesian_approval
-			has_global_flag = no_silesian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = {
-					is_core = SLS
-					NOT = { is_core = BOH }
-				}
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = {
-					is_core = SLS
-					NOT = { is_core = BOH }
-				}
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = {
-					is_core = SLS
-					NOT = { is_core = BOH }
-				}
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_silesian_approval
-		any_pop = {
-			limit = { has_pop_culture = north_german }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
 	}
 }
 
@@ -1673,7 +280,7 @@ country_event = {
 	title = "EVTNAME98698" #Italian Agree to Federation
 	desc = "EVTDESC98698"
 	picture = "deliberation"
-	
+
 	trigger = {
 		tag = KUK
 		war = no
@@ -1691,180 +298,14 @@ country_event = {
 			num_of_revolts = 1
 		}
 	}
-	
+
 	mean_time_to_happen = {
-		months = 16
-		modifier = {
-			factor = 0.8
-			NOT = {
-				any_state = {
-					any_owned_province = { is_core = LVN }
-					average_militancy = 2
-				}
-			}
-		}
+		months = 1
 	}
-	
+
 	option = {
 		name = "Excellent news!"
 		set_global_flag = full_italian_approval
-	}
-}
-
-country_event = {
-	id = 98699
-	title = "EVTNAME98699" #The Italian Counter-Proposal
-	desc = "EVTDESC98699"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = LVN }
-		is_possible_vassal = LVN
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			LVN = { exists = yes }
-			has_global_flag = full_italian_approval
-			has_global_flag = partial_italian_approval
-			has_global_flag = no_italian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 14
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = LVN }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = LVN }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.9
-			any_state = {
-				any_owned_province = { is_core = LVN }
-				average_militancy = 5
-			}
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. This is not an option."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "We agree. Lombardy-Venetia will be a vassal state of the new federation."
-		prestige = -10
-		set_global_flag = partial_italian_approval
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "We will ignore their counter-proposal. The federation shall proceed."
-		set_global_flag = no_italian_approval
-		any_pop = {
-			limit = { has_pop_culture = north_italian }
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
-country_event = {
-	id = 98708
-	title = "EVTNAME98708" #The Italians Refuse Federation
-	desc = "EVTDESC98708"
-	picture = "deliberation"
-	
-	trigger = {
-		tag = KUK
-		war = no
-		has_country_flag = danube_proposal_in_progress
-		any_owned_province = { is_core = LVN }
-		OR = {
-			has_global_flag = full_hungarian_approval
-			has_global_flag = partial_hungarian_approval
-			has_global_flag = no_hungarian_approval
-		}
-		NOT = {
-			has_global_flag = full_italian_approval
-			has_global_flag = partial_italian_approval
-			has_global_flag = no_italian_approval
-			num_of_revolts = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = LVN }
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = LVN }
-				average_militancy = 4
-			}
-		}
-		modifier = {
-			factor = 0.8
-			any_state = {
-				any_owned_province = { is_core = LVN }
-				average_militancy = 5
-			}
-		}
-		modifier = {
-			factor = 0.8
-			is_greater_power = no
-		}
-	}
-	
-	option = {
-		name = "Then we end it here. The federation will not come to be."
-		clr_country_flag = danube_proposal_in_progress
-		prestige = -20
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "No matter. The federation shall proceed regardless."
-		set_global_flag = no_italian_approval
-		any_pop = {
-			limit = { has_pop_culture = north_italian }
-			consciousness = 8
-		}
-		ai_chance = {
-			factor = 80
-		}
 	}
 }
 
@@ -1880,17 +321,17 @@ country_event = {
 	title = "Czechs Celebrate the New Federation!"
 	desc = "Czech citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_czech_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Czech brothers."
 		clr_global_flag = full_czech_approval
@@ -1911,17 +352,17 @@ country_event = {
 	title = "Romanians Celebrate the New Federation!"
 	desc = "Romanian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_romanian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Romanian brothers."
 		clr_global_flag = full_romanian_approval
@@ -1945,17 +386,17 @@ country_event = {
 	title = "Croatians Celebrate the New Federation!"
 	desc = "Croatian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_croatian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Croatian brothers."
 		clr_global_flag = full_croatian_approval
@@ -1987,17 +428,17 @@ country_event = {
 	title = "Slovenes Celebrate the New Federation!"
 	desc = "Slovene citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_slovene_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Slovene brothers."
 		clr_global_flag = full_slovene_approval
@@ -2018,17 +459,17 @@ country_event = {
 	title = "Slovakians Celebrate the New Federation!"
 	desc = "Slovakian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_slovakian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Slovakian brothers."
 		clr_global_flag = full_slovakian_approval
@@ -2057,17 +498,17 @@ country_event = {
 	title = "Poles Celebrate the New Federation!"
 	desc = "Polish citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_polish_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Polish brothers."
 		clr_global_flag = full_polish_approval
@@ -2088,17 +529,17 @@ country_event = {
 	title = "Silesians Celebrate the New Federation!"
 	desc = "Silesian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_silesian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Silesian brothers."
 		clr_global_flag = full_silesian_approval
@@ -2119,17 +560,17 @@ country_event = {
 	title = "Italians Celebrate the New Federation!"
 	desc = "North Italian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
 		has_global_flag = full_italian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name = "We welcome our Italian brothers."
 		clr_global_flag = full_italian_approval
@@ -2151,7 +592,7 @@ country_event = {
 	title = "The New Hungarian State"
 	desc = "Citizens gathered in the Hungarian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2162,11 +603,11 @@ country_event = {
 		}
 		has_global_flag = partial_hungarian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_hungarian_approval
@@ -2208,7 +649,7 @@ country_event = {
 	title = "The New Bohemian State"
 	desc = "Citizens gathered in the Bohemian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2219,11 +660,11 @@ country_event = {
 		}
 		has_global_flag = partial_czech_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_czech_approval
@@ -2250,7 +691,7 @@ country_event = {
 	title = "The New Transylvanian State"
 	desc = "Citizens gathered in the Transylvanian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2261,11 +702,11 @@ country_event = {
 		}
 		has_global_flag = partial_romanian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_romanian_approval
@@ -2296,7 +737,7 @@ country_event = {
 	title = "The New Croatian State"
 	desc = "Citizens gathered in the Croatian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2307,11 +748,11 @@ country_event = {
 		}
 		has_global_flag = partial_croatian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_croatian_approval
@@ -2353,7 +794,7 @@ country_event = {
 	title = "The New Slovene State"
 	desc = "Citizens gathered in the Slovene capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2364,11 +805,11 @@ country_event = {
 		}
 		has_global_flag = partial_slovene_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_slovene_approval
@@ -2395,7 +836,7 @@ country_event = {
 	title = "The New Slovakian State"
 	desc = "Citizens gathered in the Slovakian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2406,11 +847,11 @@ country_event = {
 		}
 		has_global_flag = partial_slovakian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_slovakian_approval
@@ -2445,7 +886,7 @@ country_event = {
 	title = "The New Polish State"
 	desc = "Citizens gathered in the Galician-Lodomerian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2456,11 +897,11 @@ country_event = {
 		}
 		has_global_flag = partial_polish_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_polish_approval
@@ -2491,7 +932,7 @@ country_event = {
 	title = "The New Silesian State"
 	desc = "Citizens gathered in the Silesian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2502,11 +943,11 @@ country_event = {
 		}
 		has_global_flag = partial_silesian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_silesian_approval
@@ -2539,7 +980,7 @@ country_event = {
 	title = "The New Lombardo-Venetian State"
 	desc = "Citizens gathered in the Lombardo-Venetian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation."
 	picture = "celebration"
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2550,11 +991,11 @@ country_event = {
 		}
 		has_global_flag = partial_italian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "We shall march into the future together."
 		clr_global_flag = partial_italian_approval
@@ -2582,17 +1023,17 @@ country_event = {
 	title = "EVTNAME98710" #The Hungarian Rebellion
 	desc = "EVTDESC98710"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = HUN }
 		has_global_flag = no_hungarian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_hungarian_approval
@@ -2632,17 +1073,17 @@ country_event = {
 	title = "EVTNAME98711" #The Czech Rebellion
 	desc = "EVTDESC98711"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = BOH }
 		has_global_flag = no_czech_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_czech_approval
@@ -2669,17 +1110,17 @@ country_event = {
 	title = "EVTNAME98712" #The Romanian Rebellion
 	desc = "EVTDESC98712"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = ROM }
 		has_global_flag = no_romanian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_romanian_approval
@@ -2706,17 +1147,17 @@ country_event = {
 	title = "EVTNAME98713" #The Croatian Rebellion
 	desc = "EVTDESC98713"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = CRO }
 		has_global_flag = no_croatian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_croatian_approval
@@ -2743,17 +1184,17 @@ country_event = {
 	title = "EVTNAME98714" #The Slovene Rebellion
 	desc = "EVTDESC98714"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = SLO }
 		has_global_flag = no_slovene_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_slovene_approval
@@ -2780,17 +1221,17 @@ country_event = {
 	title = "EVTNAME98715" #The Slovakian Rebellion
 	desc = "EVTDESC98715"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = SLV }
 		has_global_flag = no_slovakian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_slovakian_approval
@@ -2817,17 +1258,17 @@ country_event = {
 	title = "EVTNAME98716" #The Polish Rebellion
 	desc = "EVTDESC98716"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = POL }
 		has_global_flag = no_polish_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_polish_approval
@@ -2854,17 +1295,17 @@ country_event = {
 	title = "EVTNAME98717" #The Silesian Rebellion
 	desc = "EVTDESC98717"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = SLS }
 		has_global_flag = no_silesian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_silesian_approval
@@ -2893,17 +1334,17 @@ country_event = {
 	title = "EVTNAME98719" #The Italian Rebellion
 	desc = "EVTDESC98719"
 	picture = "nationalists"
-	
+
 	trigger = {
 		tag = DNB
 		any_owned_province = { is_core = LVN }
 		has_global_flag = no_italian_approval
 	}
-	
+
 	mean_time_to_happen = {
 		months = 3
 	}
-	
+
 	option = {
 		name = "This must be kept under control."
 		clr_global_flag = no_italian_approval
@@ -2936,7 +1377,7 @@ country_event = {
 	title = "EVTNAME98720" #End of the Federation
 	desc = "EVTDESC98720"
 	major = yes
-	
+
 	trigger = {
 		tag = DNB
 		war = no
@@ -2946,7 +1387,7 @@ country_event = {
 		}
 		NOT = { has_global_flag = danubian_federation_ended }
 	}
-	
+
 	mean_time_to_happen = {
 		months = 36
 		modifier = {
@@ -2975,7 +1416,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "We shall become Austria once more."
 		set_global_flag = danubian_federation_ended
@@ -3055,7 +1496,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Never! The Federation lives on!"
 		set_global_flag = danubian_federation_ended
@@ -3132,218 +1573,218 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = 98721
-	title = "EVTNAME98720" #End of the Federation - Totalitarian
-	desc = "EVTDESC98721"
-	major = yes
-	
-	trigger = {
-		tag = DNB
-		war = no
-		NOT = {
-			government = democracy
-			government = hms_government
-			government = prussian_constitutionalism
-		}
-		OR = {
-			average_militancy = 4
-			revolt_percentage = 0.25
-		}	
-		NOT = { has_global_flag = danubian_federation_ended }
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-		modifier = {
-			factor = 0.8
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.8
-			average_militancy = 6
-		}
-		modifier = {
-			factor = 0.8
-			revolt_percentage = .35
-		}
-		modifier = {
-			factor = 0.8
-			revolt_percentage = .45
-		}
-	}
-	
-	option = {
-		name = "We shall become Austria once more."
-		set_global_flag = danubian_federation_ended
-		prestige = -30
-		primary_culture = south_german
-		remove_accepted_culture = hungarian
-		remove_accepted_culture = slovak
-		remove_accepted_culture = slovene
-		remove_accepted_culture = czech
-		remove_accepted_culture = romanian
-		remove_accepted_culture = polish
-		remove_accepted_culture = croat
-		remove_accepted_culture = north_german
-		remove_accepted_culture = north_italian
-		AUS_612 = { add_core = AUS }
-		AUS_613 = { add_core = AUS }
-		AUS_619 = { add_core = AUS }
-		AUS_734 = { add_core = AUS }
-		all_core = { remove_core = DNB }
-		any_country = {
-			limit = {
-				exists = no
-				any_core = { owned_by = THIS }
-				OR = {
-					tag = BOH
-					tag = SLO
-					tag = SLV
-					tag = SIE
-					tag = HUN
-					tag = GLM
-					tag = CRO
-					AND = {
-						tag = SLS
-						THIS = { has_country_flag = austrian_silesia }
-					}
-					tag = LVN
-				}
-			}
-			country_event = 98723
-		}
-		any_country = {
-			limit = {
-				vassal_of = THIS
-				OR = {
-					tag = BOH
-					tag = SLO
-					tag = SLV
-					tag = SIE
-					tag = HUN
-					tag = ROM
-					tag = POL
-					tag = GLM
-					tag = CRO
-					AND = {
-						tag = SLS
-						THIS = { has_country_flag = austrian_silesia }
-					}
-					tag = LVN
-				}
-			}
-			country_event = 96015
-		}
-		change_tag = AUS
-		clr_country_flag = dual_monarchy
-		any_pop = {
-			limit = { is_primary_culture = no }
-			consciousness = 5
-		}
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = "Never! The Federation lives on!"
-		set_global_flag = danubian_federation_ended
-		primary_culture = south_german
-		remove_accepted_culture = hungarian
-		remove_accepted_culture = slovak
-		remove_accepted_culture = slovene
-		remove_accepted_culture = czech
-		remove_accepted_culture = romanian
-		remove_accepted_culture = polish
-		remove_accepted_culture = croat
-		remove_accepted_culture = north_german
-		remove_accepted_culture = north_italian
-		any_country = {
-			limit = {
-				NOT = { vassal_of = THIS }
-				exists = yes
-				OR = {
-					tag = BOH
-					tag = SLO
-					tag = SLV
-					tag = SIE
-					tag = HUN
-					tag = ROM
-					tag = POL
-					tag = GLM
-					tag = CRO
-					AND = {
-						tag = SLS
-						THIS = { has_country_flag = austrian_silesia }
-					}
-					tag = LVN
-				}
-			}
-			relation = { who = THIS value = -100 }
-			casus_belli = {
-				target = THIS
-				type = humiliate
-				months = 24
-			}
-		}
-		any_country = {
-			limit = {
-				exists = no
-				any_core = { owned_by = THIS }
-				OR = {
-					tag = BOH
-					tag = SLO
-					tag = SLV
-					tag = SIE
-					tag = HUN
-					tag = GLM
-					tag = CRO
-					AND = {
-						tag = SLS
-						THIS = { has_country_flag = austrian_silesia }
-					}
-					tag = LVN
-				}
-			}
-			country_event = 98722
-		}
-		any_country = {
-			limit = {
-				vassal_of = THIS
-				OR = {
-					tag = BOH
-					tag = SLO
-					tag = SLV
-					tag = SIE
-					tag = HUN
-					tag = ROM
-					tag = POL
-					tag = GLM
-					tag = CRO
-					AND = {
-						tag = SLS
-						THIS = { has_country_flag = austrian_silesia }
-					}
-					tag = LVN
-				}
-			}
-			country_event = 98724
-		}
-		ai_chance = {
-			factor = 90
-		}
-	}
-}
+# country_event = {
+	# id = 98721
+	# title = "EVTNAME98720" #End of the Federation - Totalitarian
+	# desc = "EVTDESC98721"
+	# major = yes
+
+	# trigger = {
+		# tag = DNB
+		# war = no
+		# NOT = {
+			# government = democracy
+			# government = hms_government
+			# government = prussian_constitutionalism
+		# }
+		# OR = {
+			# average_militancy = 4
+			# revolt_percentage = 0.25
+		# }
+		# NOT = { has_global_flag = danubian_federation_ended }
+	# }
+
+	# mean_time_to_happen = {
+		# months = 12
+		# modifier = {
+			# factor = 0.8
+			# average_militancy = 5
+		# }
+		# modifier = {
+			# factor = 0.8
+			# average_militancy = 6
+		# }
+		# modifier = {
+			# factor = 0.8
+			# revolt_percentage = .35
+		# }
+		# modifier = {
+			# factor = 0.8
+			# revolt_percentage = .45
+		# }
+	# }
+
+	# option = {
+		# name = "We shall become Austria once more."
+		# set_global_flag = danubian_federation_ended
+		# prestige = -30
+		# primary_culture = south_german
+		# remove_accepted_culture = hungarian
+		# remove_accepted_culture = slovak
+		# remove_accepted_culture = slovene
+		# remove_accepted_culture = czech
+		# remove_accepted_culture = romanian
+		# remove_accepted_culture = polish
+		# remove_accepted_culture = croat
+		# remove_accepted_culture = north_german
+		# remove_accepted_culture = north_italian
+		# AUS_612 = { add_core = AUS }
+		# AUS_613 = { add_core = AUS }
+		# AUS_619 = { add_core = AUS }
+		# AUS_734 = { add_core = AUS }
+		# all_core = { remove_core = DNB }
+		# any_country = {
+			# limit = {
+				# exists = no
+				# any_core = { owned_by = THIS }
+				# OR = {
+					# tag = BOH
+					# tag = SLO
+					# tag = SLV
+					# tag = SIE
+					# tag = HUN
+					# tag = GLM
+					# tag = CRO
+					# AND = {
+						# tag = SLS
+						# THIS = { has_country_flag = austrian_silesia }
+					# }
+					# tag = LVN
+				# }
+			# }
+			# country_event = 98723
+		# }
+		# any_country = {
+			# limit = {
+				# vassal_of = THIS
+				# OR = {
+					# tag = BOH
+					# tag = SLO
+					# tag = SLV
+					# tag = SIE
+					# tag = HUN
+					# tag = ROM
+					# tag = POL
+					# tag = GLM
+					# tag = CRO
+					# AND = {
+						# tag = SLS
+						# THIS = { has_country_flag = austrian_silesia }
+					# }
+					# tag = LVN
+				# }
+			# }
+			# country_event = 96015
+		# }
+		# change_tag = AUS
+		# clr_country_flag = dual_monarchy
+		# any_pop = {
+			# limit = { is_primary_culture = no }
+			# consciousness = 5
+		# }
+		# ai_chance = {
+			# factor = 10
+		# }
+	# }
+
+	# option = {
+		# name = "Never! The Federation lives on!"
+		# set_global_flag = danubian_federation_ended
+		# primary_culture = south_german
+		# remove_accepted_culture = hungarian
+		# remove_accepted_culture = slovak
+		# remove_accepted_culture = slovene
+		# remove_accepted_culture = czech
+		# remove_accepted_culture = romanian
+		# remove_accepted_culture = polish
+		# remove_accepted_culture = croat
+		# remove_accepted_culture = north_german
+		# remove_accepted_culture = north_italian
+		# any_country = {
+			# limit = {
+				# NOT = { vassal_of = THIS }
+				# exists = yes
+				# OR = {
+					# tag = BOH
+					# tag = SLO
+					# tag = SLV
+					# tag = SIE
+					# tag = HUN
+					# tag = ROM
+					# tag = POL
+					# tag = GLM
+					# tag = CRO
+					# AND = {
+						# tag = SLS
+						# THIS = { has_country_flag = austrian_silesia }
+					# }
+					# tag = LVN
+				# }
+			# }
+			# relation = { who = THIS value = -100 }
+			# casus_belli = {
+				# target = THIS
+				# type = humiliate
+				# months = 24
+			# }
+		# }
+		# any_country = {
+			# limit = {
+				# exists = no
+				# any_core = { owned_by = THIS }
+				# OR = {
+					# tag = BOH
+					# tag = SLO
+					# tag = SLV
+					# tag = SIE
+					# tag = HUN
+					# tag = GLM
+					# tag = CRO
+					# AND = {
+						# tag = SLS
+						# THIS = { has_country_flag = austrian_silesia }
+					# }
+					# tag = LVN
+				# }
+			# }
+			# country_event = 98722
+		# }
+		# any_country = {
+			# limit = {
+				# vassal_of = THIS
+				# OR = {
+					# tag = BOH
+					# tag = SLO
+					# tag = SLV
+					# tag = SIE
+					# tag = HUN
+					# tag = ROM
+					# tag = POL
+					# tag = GLM
+					# tag = CRO
+					# AND = {
+						# tag = SLS
+						# THIS = { has_country_flag = austrian_silesia }
+					# }
+					# tag = LVN
+				# }
+			# }
+			# country_event = 98724
+		# }
+		# ai_chance = {
+			# factor = 90
+		# }
+	# }
+# }
 
 country_event = {
 	id = 98722
 	title = "Independence!"
 	desc = "With the breakup of the Danubian Federation, we have gained our independence at last-- but we must fight to keep it."
 	picture = "celebration"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Let the war begin!"
 		FROM = {
@@ -3376,9 +1817,9 @@ country_event = {
 	title = "Independence!"
 	desc = "With the breakup of $FROMCOUNTRY$, we have gained our independence at last."
 	picture = "celebration"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "It's about time!"
 		FROM = {
@@ -3431,9 +1872,9 @@ country_event = {
 	title = "The Danubian Civil War"
 	desc = "The federation teeters on the verge of extinction, and now we must determine whether we stand by it or fight to at last elicit our independence."
 	picture = "rebellion"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "The time has come to fight!"
 		any_country = {
@@ -3471,7 +1912,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "We will remain with the federation."
 		relation = { who = FROM value = 50 }
