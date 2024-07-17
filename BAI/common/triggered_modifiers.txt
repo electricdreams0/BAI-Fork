@@ -85,33 +85,163 @@ social_reformed_nation = {
 	icon = 13
 }
 
-educational_spen = {
-	trigger = {
-		ai = yes
-		exists = yes
-		education_spending = 0.74
-	}
+# educational_spen = {
+	# trigger = {
+		# ai = yes
+		# exists = yes
+		# education_spending = 0.74
+	# }
 
-	education_efficiency_modifier = 0.25
-	icon = 16
+	# education_efficiency_modifier = 0.25
+	# icon = 16
+# }
+
+# admin_spen = {
+	# trigger = {
+		# ai = yes
+		# exists = yes
+		# administration_spending = 0.74
+	# }
+
+	# administrative_efficiency_modifier = 0.25
+	# icon = 16
+# }
+
+# ai_bonus = {
+	# trigger = {
+		# ai = yes
+		# exists = yes
+	# }
+	# mobilisation_economy_impact = -0.05
+	# tax_efficiency = 0.05
+# }
+
+### HPMP Economy ###
+
+money_hoarder_1 = {
+trigger = {
+money = 1000000
+not = { money = 2000000 }
+}
+tax_efficiency = -0.05
+tariff_efficiency_modifier = -0.20
+icon = 1
 }
 
-admin_spen = {
-	trigger = {
-		ai = yes
-		exists = yes
-		administration_spending = 0.74
-	}
-
-	administrative_efficiency_modifier = 0.25
-	icon = 16
+money_hoarder_2 = {
+trigger = {
+money = 2000000
+not = { money = 5000000 }
+}
+tax_efficiency = -0.10
+tariff_efficiency_modifier = -0.40
+icon = 1
 }
 
-ai_bonus = {
+money_hoarder_3 = {
+trigger = {
+money = 5000000
+not = { money = 10000000 }
+}
+tax_efficiency = -0.15
+tariff_efficiency_modifier = -0.60
+icon = 1
+}
+
+money_hoarder_4 = {
+trigger = {
+money = 10000000
+not = { money = 15000000 }
+}
+tax_efficiency = -0.20
+tariff_efficiency_modifier = -0.80
+icon = 1
+}
+
+money_hoarder_5 = {
+trigger = {
+money = 15000000
+}
+factory_output = -0.10
+tax_efficiency = -0.25
+tariff_efficiency_modifier = -1.0
+icon = 1
+}
+
+### Crimeamod AI ###
+
+laissez_faire_tarrifs = {
 	trigger = {
-		ai = yes
 		exists = yes
+		ai = yes
+		has_global_flag = harder_ai
+		OR = {
+			economic_policy = laissez_faire
+			civilized = no
+			NOT = {
+				year = 1860
+			}
+			NOT = {
+				literacy = 0.4
+			}
+		}
+		OR = {
+			NOT = {
+				is_culture_group = british
+				is_culture_group = french
+				is_culture_group = germanic
+			}
+			is_greater_power = no
+			NOT = { year = 1860 }
+		}
 	}
-	mobilisation_economy_impact = -0.05
-	tax_efficiency = 0.05
+	icon = 10
+	min_tariff = 0.5
+}
+laissez_faire_tarrifs2 = {
+	trigger = {
+		exists = yes
+		ai = yes
+		has_global_flag = harder_ai
+		trade_policy = protectionism
+		war = yes
+		OR = {
+		NOT = {
+			is_culture_group = british
+			is_culture_group = french
+			is_culture_group = germanic
+		}
+		is_greater_power = no
+		NOT = { year = 1870 }
+		}
+	}
+	icon = 10
+	min_tariff = 0.25
+}
+low_lit_tariffs = {
+	trigger = {
+		exists = yes
+		ai = yes
+		has_global_flag = harder_ai
+		trade_policy = protectionism
+		NOT = {
+			literacy = 0.2
+		}
+	}
+	icon = 10
+	min_tariff = 0.25
+}
+low_lit_tariffs_war = {
+	trigger = {
+		exists = yes
+		ai = yes
+		has_global_flag = harder_ai
+		war = yes
+		trade_policy = protectionism
+		NOT = {
+			literacy = 0.2
+		}
+	}
+	icon = 10
+	min_tariff = 0.25
 }
