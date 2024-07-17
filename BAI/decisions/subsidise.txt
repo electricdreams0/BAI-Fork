@@ -1,0 +1,44 @@
+political_decisions = {
+    subsidise_no = {
+	    potential = {
+		has_country_flag = utility_options
+		    ai = no
+			civilized = yes
+			OR = {
+			    	economic_policy = interventionism
+				economic_policy = state_capitalism
+				economic_policy = planned_economy
+			}
+			subsidise = subsidise_yes
+		}
+		
+		effect = {
+			set_country_flag = hates_subsidies
+		    	political_reform = subsidise_no
+		}
+	ai_will_do = {
+				factor = 0
+	}
+    }
+	subsidise_yes = {
+	    potential = {
+		has_country_flag = utility_options
+		    ai = no
+		civilized = yes
+			OR = {
+			   	economic_policy = interventionism
+				economic_policy = state_capitalism
+				economic_policy = planned_economy
+			}
+			subsidise = subsidise_no
+		}
+		
+		effect = {
+			clr_country_flag = hates_subsidies
+		    	political_reform = subsidise_yes
+		}		
+	ai_will_do = {
+	factor = 0
+	}
+    }
+}
