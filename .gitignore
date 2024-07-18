@@ -21,6 +21,9 @@ $RECYCLE.BIN/
 # bak files
 *.bak
 
+# .editorconfig
+.editorconfig
+
 # =========================
 # Operating System Files
 # =========================
