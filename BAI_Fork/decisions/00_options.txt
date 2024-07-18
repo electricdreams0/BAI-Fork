@@ -346,7 +346,7 @@ political_decisions = {
 	#
 	enable_utilities = {
 		picture = address_the_nation
-		alert = yes
+		alert = no
 		potential = {
 			ai = no
 			NOT = { has_country_flag = utility_options }
