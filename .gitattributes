@@ -15,3 +15,11 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+# Set encoding to Windows-1252
+*.txt encoding=cp1252
+*.lua encoding=cp1252
+*.csv encoding=cp1252
+
+# Specifiy that .CSV files need to end with LF EOL
+*.csv text eol=lf
