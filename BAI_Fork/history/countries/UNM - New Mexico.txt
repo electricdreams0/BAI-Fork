@@ -1,6 +1,5 @@
 capital = 100
 primary_culture = dixie
-culture = texan
 culture = mexican
 culture = pueblo
 religion = protestant
@@ -27,7 +26,7 @@ work_hours = ten_hours
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions 
+pensions = no_pensions
 school_reforms = low_schools
 
 ruling_party = UNM_liberal
