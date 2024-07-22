@@ -9,9 +9,9 @@ country_event = {
 	title = "EVTNAME44800" #Madero's Manifesto
 	desc = "EVTDESC44800"
 	picture = "Madero"
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = MEX
 		year = 1909
@@ -23,7 +23,7 @@ country_event = {
 			poor_strata_everyday_needs = 0.75 #will not fire if poor are getting 75%+ everyday needs
 		}
 	}
-	
+
 	mean_time_to_happen =  {
 		months = 5
 		modifier = {
@@ -122,9 +122,9 @@ country_event = {
 	title = "EVTNAME44801" #Madero Enlists Supporters
 	desc = "EVTDESC44801"
 	picture = "Riot"
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = MEX
 		year = 1911
@@ -137,7 +137,7 @@ country_event = {
 			poor_strata_everyday_needs = 0.95 #will not fire if poor are getting 95%+ everyday needs
 		}
 	}
- 
+
 	mean_time_to_happen =  {
 		months = 5
 		modifier = {
@@ -157,7 +157,7 @@ country_event = {
 				militancy = 8
 			}
 		}
-		2139 = { #N Baja 
+		2139 = { #N Baja
 			any_pop = {
 				militancy = 8
 			}
@@ -194,7 +194,7 @@ country_event = {
 			government = hms_government
 		}
 	}
- 
+
 	mean_time_to_happen =  {
 		months = 5
 		modifier = {
@@ -228,7 +228,7 @@ country_event = {
 	title = "EVTNAME44803" #Jose Posada
 	desc = "EVTDESC44803"
 	picture = "Posada"
-	
+
 	fire_only_once = yes
 
 	trigger = {
@@ -241,7 +241,7 @@ country_event = {
 			year = 1915
 		}
 	}
- 
+
 	mean_time_to_happen =  {
 		months = 5
 		modifier = {
@@ -255,7 +255,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA44803" 
+		name = "EVTOPTA44803"
 		farmers = {
 			consciousness = 3
 		}
@@ -374,11 +374,11 @@ country_event = {
 }
 
 province_event = {
-	
+
 	id = 44810
 	title = "EVTNAME44810" #Rebellion in $STATENAME$
 	desc = "EVTDESC44810"
-	
+
 	trigger = {
 		owner = {
 			tag = MEX
@@ -481,11 +481,11 @@ province_event = {
 				consciousness = 4
 			}
 		}
-	}				
+	}
 }
 
 country_event = {
-	
+
 	id = 44815
 	title = "EVTNAME44815" #Texas Recaptured!
 	desc = "EVTDESC44815"
@@ -511,7 +511,7 @@ country_event = {
 		war_exhaustion = -30
 		prestige = 5
 		any_pop = {
-			limit = { has_pop_culture = texan }
+			limit = { has_pop_culture = dixie }
 			militancy = 10
 			consciousness = 4
 			dominant_issue = {
@@ -589,7 +589,7 @@ country_event = {
 				factor = 0.5
 				war = yes
 			}
-		}	
+		}
 	}
 
 	option = {
@@ -674,7 +674,7 @@ country_event = {
 				factor = 0.5
 				num_of_revolts = 1
 			}
-		}	
+		}
 	}
 
 	option = {
@@ -702,7 +702,7 @@ country_event = {
 }
 
 country_event = {
-	
+
 	id = 44822
 	title = "EVTNAME44822" #Join the United Provinces?
 	desc = "EVTDESC44822"
@@ -758,7 +758,7 @@ country_event = {
 				change_tag = UCA
 				primary_culture = central_american
 				add_accepted_culture = mayan
-			}	
+			}
 		}
 		ai_chance = {
 			factor = 95
@@ -775,7 +775,7 @@ country_event = {
 }
 
 country_event = {
-	
+
 	id = 44825
 	title = "EVTNAME44825" #The Treaty of Guadalupe Hidalgo
 	desc = "EVTDESC44825"
@@ -935,7 +935,7 @@ country_event = {
 }
 
 country_event = {
-	
+
 	id = 44829
 	title = "EVTNAME44825" #The Treaty of Guadalupe Hidalgo
 	desc = "EVTDESC44825"
@@ -1221,7 +1221,7 @@ country_event = {
 	title = "EVTNAME44840" #Santa Anna Captured!
 	desc = "EVTDESC44840"
 	picture = "surrender_of_santanna"
-	
+
 	trigger = {
 		tag = TEX
 		war_with = MEX
@@ -1229,7 +1229,7 @@ country_event = {
 		any_owned_province = { country_units_in_province = MEX }
 		NOT = { has_country_flag = santa_ana_captured }
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 		modifier = {
@@ -1245,7 +1245,7 @@ country_event = {
 			TEX = { national_provinces_occupied = 0.75 }
 		}
 	}
-	
+
 	option = {
 		name = "Force him to sign the treaty."
 		set_country_flag = santa_ana_captured
@@ -1254,7 +1254,7 @@ country_event = {
 			factor = 100
 		}
 	}
-	
+
 	option = {
 		name = "Execute him."
 		set_country_flag = santa_ana_captured
@@ -1280,9 +1280,9 @@ country_event = {
 	news_desc_short = "EVTDESC44807_NEWS_SHORT"
 	picture = "surrender_of_santanna"
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Honor the treaty and negotiate for Santa Anna's return."
 		remove_country_modifier = military_man
@@ -1304,7 +1304,7 @@ country_event = {
 			factor = 5
 		}
 	}
-	
+
 	option = {
 		name = "Call a ceasefire-- for now."
 		remove_country_modifier = military_man
@@ -1320,7 +1320,7 @@ country_event = {
 			factor = 80
 		}
 	}
-	
+
 	option = {
 		name = "Continue the war. Let the Americans do as they wish."
 		remove_country_modifier = military_man
@@ -1342,9 +1342,9 @@ country_event = {
 	title = "EVTNAME44842" #The Treaties of Velasco
 	desc = "EVTDESC44842"
 	picture = "treaty_of_velasco"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Victory for Texas!"
 		any_country = {
@@ -1368,9 +1368,9 @@ country_event = {
 	title = "EVTNAME44843" #Ceasefire With Mexico
 	desc = "EVTDESC44843"
 	picture = "administration"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "This will have to do."
 		any_country = {
@@ -1394,9 +1394,9 @@ country_event = {
 	title = "EVTNAME44844" #Mexico Ignores the Treaties
 	desc = "EVTDESC44844"
 	picture = "treaty_of_velasco"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Appeal to the Americans for help."
 		war_exhaustion = -20
@@ -1412,7 +1412,7 @@ country_event = {
 			factor = 100
 		}
 	}
-	
+
 	option = {
 		name = "We will fight this out on our own."
 		war_exhaustion = -20
@@ -1434,7 +1434,7 @@ country_event = {
 	title = "EVTNAME44845" #War With Mexico!
 	desc = "EVTDESC44845"
 	picture = "administration"
-	
+
 	trigger = {
 		tag = TEX
 		has_country_modifier = treaties_of_velasco
@@ -1444,11 +1444,11 @@ country_event = {
 			NOT = { war_with = USA }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
 	option = {
 		name = "Appeal to the Americans for help."
 		remove_country_modifier = treaties_of_velasco
@@ -1457,7 +1457,7 @@ country_event = {
 			factor = 100
 		}
 	}
-	
+
 	option = {
 		name = "We will fight this out on our own."
 		remove_country_modifier = treaties_of_velasco
@@ -1472,9 +1472,9 @@ country_event = {
 	title = "EVTNAME44846" #The Texan Diplomat
 	desc = "EVTDESC44846"
 	picture = "administration"
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Tell them we will do what we can."
 		diplomatic_influence = { who = FROM value = 200 }
@@ -1484,7 +1484,7 @@ country_event = {
 		leave_alliance = MEX
 		ai_chance = { factor = 75 }
 	}
-	
+
 	option = {
 		name = "They are on their own."
 		diplomatic_influence = { who = FROM value = -100 }

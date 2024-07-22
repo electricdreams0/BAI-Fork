@@ -29,7 +29,7 @@ country_event = {
 			has_country_flag = second_constitutional_convention
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 36
 		modifier = {
@@ -49,14 +49,14 @@ country_event = {
 			year = 1870
 		}
 	}
-	
+
 	immediate = {
 		set_variable = {
 			which = FSA_states
 			value = 1
-		}		
+		}
 	}
-	
+
 	option = {
 		name = "The convention will move forward."
 		set_country_flag = second_constitutional_convention
@@ -112,7 +112,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "The constitution shall not be amended to appease abolitionists."
 		set_country_flag = second_constitutional_convention
@@ -190,7 +190,7 @@ country_event = {
 			has_country_flag = second_constitutional_convention
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 36
 		modifier = {
@@ -210,7 +210,7 @@ country_event = {
 			year = 1870
 		}
 	}
-	
+
 	option = {
 		name = "And what will this achieve, exactly?"
 		set_country_flag = second_constitutional_convention
@@ -264,7 +264,7 @@ province_event = {
 	id = 16505
 	title = "EVTNAME16250"
 	desc = "EVTDESC16505"
-	
+
 	trigger = {
 		NOT = { is_core = CSA }
 		NOT = { is_core = FSA }
@@ -291,7 +291,7 @@ province_event = {
 			average_militancy = 5
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 6
 		modifier = {
@@ -303,7 +303,7 @@ province_event = {
 			average_consciousness = 9
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTA16250"
 		owner = { prestige = -2 }
@@ -345,7 +345,7 @@ province_event = {
 			average_militancy = 5
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 6
 		modifier = {
@@ -361,7 +361,7 @@ province_event = {
 			average_consciousness = 9
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTA16250"
 		owner = {
@@ -410,7 +410,7 @@ country_event = {
 			has_global_flag = american_civil_war_has_happened
 		}
 	}
-		
+
 	mean_time_to_happen = {
 		months = 30
 		modifier = {
@@ -522,7 +522,7 @@ country_event = {
 			factor = 0
 		}
 	}
-	
+
 	option = {
 		name = "The rebels shall be dealt with swiftly and mercilessly."
 		set_global_flag = american_civil_war_has_happened
@@ -588,7 +588,7 @@ country_event = {
 	title = "EVTNAME16515"
 	desc = "EVTDESC16515"
 	major = yes
-	
+
 	trigger = {
 		tag = USA
 		war = no
@@ -606,11 +606,11 @@ country_event = {
 			has_global_flag = fsa_right_to_secede
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		days = 7
 	}
-	
+
 	option = {
 		name = "All of America will be retaken. We swear it."
 		prestige = -50
@@ -642,7 +642,6 @@ country_event = {
 					any_owned_province = {
 						OR = {
 							culture = dixie
-							culture = texan
 							is_core = TEX
 						}
 					}
@@ -657,7 +656,6 @@ country_event = {
 						any_owned_province = {
 							OR = {
 								culture = dixie
-								culture = texan
 								is_core = TEX
 							}
 						}

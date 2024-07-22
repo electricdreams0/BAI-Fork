@@ -150,7 +150,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { owner = { primary_culture = texan } }
+				limit = { owner = { primary_culture = dixie } }
 					owner = {
 					any_owned = {
 						limit = {

@@ -1,6 +1,5 @@
 capital = 211
 primary_culture = dixie
-culture = texan
 religion = protestant
 government = democracy
 plurality = 25.1
@@ -102,7 +101,7 @@ market_structure = 1
 	northrop_power_loom = yes
 	mechanical_saw = yes
 	mobilization_time_tables = yes
-	
+
 	pressure_chambers_for_thorax_surgery = yes
 	work_classification = yes
 	personnel_category_tables = yes
@@ -137,7 +136,7 @@ work_hours = no_work_hour_limit
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions 
+pensions = no_pensions
 school_reforms = no_schools
 
 ruling_party = CSA_conservative
@@ -157,7 +156,7 @@ set_country_flag = protestant_religion
 1861.1.1 = {
 	oob = "/1861/CSA_oob.txt"
 	set_country_flag = 1861CSAstart
-	 
+
 }
 1861.1.1 = {
 
@@ -180,7 +179,7 @@ non_state_culture_literacy = 0.10
 	army_command_principle = 1
 	army_professionalism = 1
 	army_decision_making = 1
-	
+
 	post_nelsonian_thought = 1
 	battleship_column_doctrine = 1
 	clipper_design = 1
@@ -192,7 +191,7 @@ non_state_culture_literacy = 0.10
 	alphabetic_flag_signaling = 1
 	the_command_principle = 1
 	naval_professionalism = 1
-	
+
 	private_banks = 1
 	stock_exchange = 1
 	no_standard = 1
@@ -204,7 +203,7 @@ non_state_culture_literacy = 0.10
 	market_structure = 1
 	guild_based_production = 1
 	organized_factories = 1
-	
+
 	classicism_n_early_romanticism = 1
 	romanticism = 1
 	late_enlightenment_philosophy = 1
@@ -216,7 +215,7 @@ non_state_culture_literacy = 0.10
 	state_n_government = 1
 	introspectionism = 1
 	associationism = 1
-	
+
 	water_wheel_power = 1
 	practical_steam_engine = 1
 	high_n_low_pressure_steam_engines = 1
