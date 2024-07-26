@@ -80,41 +80,10 @@ social_reformed_nation = {
 			health_care = good_health_care
 			school_reforms = good_schools
 		}
-		
+
 	social_reform_desire = -0.3
 	icon = 13
 }
-
-# educational_spen = {
-	# trigger = {
-		# ai = yes
-		# exists = yes
-		# education_spending = 0.74
-	# }
-
-	# education_efficiency_modifier = 0.25
-	# icon = 16
-# }
-
-# admin_spen = {
-	# trigger = {
-		# ai = yes
-		# exists = yes
-		# administration_spending = 0.74
-	# }
-
-	# administrative_efficiency_modifier = 0.25
-	# icon = 16
-# }
-
-# ai_bonus = {
-	# trigger = {
-		# ai = yes
-		# exists = yes
-	# }
-	# mobilisation_economy_impact = -0.05
-	# tax_efficiency = 0.05
-# }
 
 ### HPMP Economy ###
 
