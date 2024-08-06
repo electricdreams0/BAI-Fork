@@ -1,6 +1,6 @@
 rail_focus = {
 	encourage_rail = {
-		railroads = 0.5 #Capitalists 50% more likely to choose railroads
+		railroads = 1 #Capitalists 100% more likely to choose railroads
 		icon = 2
 		limit = {
 			NOT = { owner = { economic_policy = planned_economy } }
