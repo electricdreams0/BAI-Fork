@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
-* text=auto eol=lf
+* text=auto
 
 # Custom for Visual Studio
 *.cs     diff=csharp
@@ -20,6 +20,3 @@
 *.txt encoding=cp1252
 *.lua encoding=cp1252
 *.csv encoding=cp1252
-
-# Specifiy that .CSV files need to end with LF EOL
-*.csv text eol=lf
